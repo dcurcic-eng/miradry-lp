@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>miraDry | One hour in our clinic and you're finally dry.</title>
+<meta name="description" content="The only FDA-cleared treatment that permanently eliminates underarm sweat and odor glands. Non-surgical, performed in our Newport Beach clinic. $250 off, limited time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   miraDry LP - tokens
+   ============================================================ */
+:root{
+  --navy:#2B3677;
+  --navy-deepest:#0B1863;
+  --blue-action:#334CE3;
+  --blue-submit:#204CE5;
+  --blue-submit-hover:#001AB3;
+  --peach:#FF9E7F;
+  --sand:#E9D9C9;
+  --grey:#626262;
+  --cream:#FFF5EE;
+  --offwhite:#FFFCFA;
+  --sky:#E4F0F9;
+  --white:#FFFFFF;
+  --font:"Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --radius-pill:32px;
+  --border-cta:2.67px;
+  --header-h:104px;
+  /* fluid layout scale - every block height below is a share of the viewport */
+  --gut:80px;
+  --hero-photo:86.4%;
+  --mosaic-h:clamp(620px,82vh,744px);
+  --mo:calc(var(--mosaic-h) - 8px);
+  --h-496:calc(var(--mo) * 0.6739);
+  --h-492:calc(var(--mo) * 0.6685);
+  --h-244:calc(var(--mo) * 0.3315);
+  --h-240:calc(var(--mo) * 0.3261);
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;width:100%;overflow-x:hidden;
+  font-family:var(--font);font-weight:300;color:var(--navy);
+  background:var(--white);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;}
+input,textarea{font:inherit;}
+svg{display:block;}
+
+/* shared type helpers ------------------------------------------------ */
+.eyebrow-16{font-size:16px;font-weight:900;letter-spacing:.5px;line-height:1.5;color:var(--navy);text-transform:uppercase;}
+.eyebrow-12{font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:var(--navy);text-transform:uppercase;}
+.h-40{font-size:40px;font-weight:900;line-height:1.2;color:var(--navy);margin:0;}
+.body-16{font-size:16px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:var(--grey);}
+.micro-10{font-size:10px;font-weight:300;letter-spacing:1px;line-height:1.6;color:var(--grey);text-transform:uppercase;}
+
+/* pill buttons ------------------------------------------------------- */
+.pill{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  border-radius:var(--radius-pill);font-size:12px;font-weight:900;
+  letter-spacing:.5px;line-height:1.4;text-transform:uppercase;
+  padding:11px 26px 8px;border:var(--border-cta) solid transparent;white-space:nowrap;
+  will-change:background-color,border-color;
+}
+.pill svg{width:15px;height:15px;flex:0 0 15px;}
+.pill--cream{background:var(--cream);border-color:var(--sand);color:var(--navy);}
+.pill--ghost-light{background:transparent;border-color:rgba(255,255,255,.4);color:var(--white);}
+.pill--white{background:var(--white);border-color:var(--sand);color:var(--navy);}
+.pill--navy{background:var(--navy);border-color:var(--navy);color:var(--white);}
+.pill--outline-navy{background:transparent;border-color:var(--navy);color:var(--navy);}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:1200;
+  height:var(--header-h);background:rgba(0,0,0,0);
+  box-shadow:0 2px 40px 0 rgba(37,42,68,.4);
+}
+.hdr-inner{
+  height:var(--header-h);display:flex;align-items:center;
+  padding:0 80px;position:relative;
+}
+.hdr-hairline{
+  position:absolute;left:80px;right:80px;bottom:0;height:1px;
+  background:rgba(255,255,255,.14);
+}
+.hdr-logo{flex:0 0 auto;width:152px;height:45px;object-fit:contain;object-position:left center;}
+.hdr-logo--navy{display:none;}
+.hdr-nav{display:flex;gap:34px;margin-left:56px;}
+.hdr-nav a{
+  position:relative;font-size:12px;font-weight:300;letter-spacing:1.5px;
+  line-height:2;color:rgba(255,255,255,.86);text-transform:uppercase;
+}
+.hdr-nav a .ul{
+  position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--peach);
+  transform:scaleX(0);transform-origin:left center;
+}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:22px;}
+.hdr-phone{font-size:12px;font-weight:900;letter-spacing:1.5px;line-height:1.4;color:var(--white);text-align:right;}
+.hdr-cta{
+  width:221px;height:36px;padding:0;gap:9px;border:0;
+  background:var(--cream);color:var(--navy);
+}
+.hdr-burger{display:none;flex-direction:column;width:44px;height:44px;align-items:center;justify-content:center;gap:6px;margin-left:10px;flex:0 0 44px;}
+.hdr-burger span{display:block;width:24px;height:2px;background:var(--white);transform-origin:center;}
+
+/* mobile drawer */
+.drawer{position:fixed;inset:0;z-index:1400;visibility:hidden;}
+.drawer__overlay{position:absolute;inset:0;background:rgba(0,0,0,.4);opacity:0;}
+.drawer__inner{
+  position:absolute;top:0;right:0;bottom:0;width:min(360px,86vw);
+  background:var(--navy);padding:28px 28px 40px;opacity:0;
+  display:flex;flex-direction:column;gap:22px;overflow-y:auto;
+}
+.drawer__close{align-self:flex-end;width:36px;height:36px;position:relative;}
+.drawer__close i{position:absolute;left:7px;right:7px;top:17px;height:2px;background:#fff;display:block;}
+.drawer__inner a{font-size:14px;font-weight:900;letter-spacing:1.5px;color:#fff;text-transform:uppercase;}
+
+/* ============================================================
+   01 HERO
+   ============================================================ */
+.hero{position:relative;background:var(--navy);min-height:100vh;min-height:100svh;overflow:hidden;}
+.hero__photo{
+  position:absolute;top:0;left:0;width:100%;height:var(--hero-photo);
+  background:url("images/hero3.jpg") center center/cover no-repeat;
+}
+.hero__scrim-left{
+  position:absolute;top:0;left:0;width:min(980px,72%);height:var(--hero-photo);
+  background:linear-gradient(to left,rgba(11,24,99,0) 0%,rgba(11,24,99,.14) 43%,rgba(11,24,99,.30) 70%,rgba(11,24,99,.50) 100%);
+}
+.hero__scrim-bottom{
+  position:absolute;top:31%;left:0;width:100%;height:55.5%;
+  background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.45) 100%);
+}
+.hero__scrim-top{
+  position:absolute;top:0;left:0;width:100%;height:22.7%;max-height:240px;
+  background:linear-gradient(to bottom,rgba(11,24,99,.58) 0%,rgba(11,24,99,.20) 50%,rgba(11,24,99,0) 100%);
+}
+.hero__inner{
+  position:relative;z-index:2;display:flex;align-items:flex-start;
+  padding:0 80px;gap:60px;
+}
+.hero__copy{flex:1 1 auto;padding-top:clamp(200px,calc(var(--header-h) + 21vh),340px);display:flex;flex-direction:column;gap:22px;max-width:760px;}
+.hero__eyebrow{font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:var(--peach);text-transform:uppercase;}
+.hero__headgroup{display:flex;flex-direction:column;gap:6px;}
+.hero__leadin{font-size:43px;font-weight:300;line-height:1;color:#fff;margin:0;}
+.hero__display{display:flex;align-items:flex-end;gap:24px;font-size:92px;line-height:1;letter-spacing:.8px;color:#fff;margin:0;font-weight:900;}
+.hero__display em{font-style:italic;font-weight:900;}
+.hero__sub{font-size:16px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:rgba(255,255,255,.85);max-width:560px;margin:0;}
+.hero__offer{font-size:10px;font-weight:300;letter-spacing:1px;line-height:1;color:var(--peach);text-transform:uppercase;}
+.hero__ctas{display:flex;gap:16px;flex-wrap:wrap;}
+.hero__ctas .pill svg{width:15px;height:15px;}
+.hero__ctas .pill--ghost-light svg{width:14px;height:14px;flex:0 0 14px;}
+
+/* inline form panel */
+.form-panel{
+  flex:0 0 460px;margin-top:clamp(130px,calc(var(--header-h) + 11vh),230px);background:rgba(255,245,238,.85);
+  border:var(--border-cta) solid var(--sand);padding:36px;
+  box-shadow:0 1px 4px 0 rgba(18,25,97,.08);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.form-panel__offer{display:flex;align-items:flex-end;gap:12px;padding:14px 0 6px;}
+.form-panel__amount{font-size:40px;font-weight:900;line-height:1;color:var(--navy);}
+.form-panel__qual{font-size:16px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:var(--grey);}
+.form-panel__sub{font-size:14px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:var(--grey);margin:0;}
+.fields{display:flex;flex-direction:column;gap:16px;padding:22px 0 24px;}
+.field{display:flex;flex-direction:column;gap:7px;}
+.field label{font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:var(--navy);text-transform:uppercase;}
+.field input,.field textarea{
+  height:46px;border-radius:3px;background:var(--white);border:1px solid var(--sand);
+  padding:0 14px;font-size:16px;font-weight:300;letter-spacing:.5px;color:var(--navy);
+  box-shadow:0 1px 4px 0 rgba(18,25,97,.08);outline:none;width:100%;
+}
+.field input::placeholder,.field textarea::placeholder{color:var(--grey);opacity:1;}
+.submit-btn{
+  width:100%;height:46px;border-radius:var(--radius-pill);background:var(--blue-submit);
+  color:#fff;display:flex;align-items:center;justify-content:center;gap:9px;
+  font-size:12px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;border:0;
+}
+.submit-btn svg{width:15px;height:15px;}
+.consent{font-size:10px;font-weight:300;letter-spacing:1px;line-height:1.6;color:var(--grey);text-transform:uppercase;margin:0;}
+.form-ok{display:none;font-size:16px;font-weight:900;line-height:1.5;color:var(--navy);padding:10px 0;}
+.spinner{width:16px;height:16px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;display:none;}
+
+/* ============================================================
+   03 TRUST STRIP
+   ============================================================ */
+.trust{background:var(--navy);padding:80px 64px;display:flex;gap:40px;}
+.trust__item{flex:1 1 0;display:flex;flex-direction:column;align-items:center;text-align:center;}
+.trust__item img{width:76px;height:76px;object-fit:contain;margin-bottom:24px;}
+.trust__icon{display:block;width:76px;height:76px;margin-bottom:24px;overflow:visible;}
+.trust__icon path{fill:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;}
+.trust__label{font-size:16px;font-weight:900;letter-spacing:.5px;line-height:1.5;color:#fff;margin-bottom:10px;text-transform:uppercase;}
+.trust__body{font-size:14px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:rgba(255,255,255,.8);}
+
+/* ============================================================
+   SPLIT SECTIONS (problem / cost / quiz / credibility)
+   ============================================================ */
+.split{display:flex;align-items:stretch;}
+.split__photo{flex:1 1 auto;background-position:center;background-size:cover;background-repeat:no-repeat;min-height:clamp(300px,46vh,460px);}
+.panel-sky{background:var(--sky);padding:96px 80px;}
+.panel-cream{background:var(--cream);padding:96px 80px;}
+
+.problem__copy{flex:0 0 60%;}
+.problem__lede{font-size:32px;font-weight:300;letter-spacing:.67px;line-height:1.38;color:var(--navy);margin:0;}
+.problem__details{display:flex;gap:48px;}
+.problem__details > div{flex:1 1 0;display:flex;flex-direction:column;gap:10px;}
+.stat-rule{
+  border-left:4px solid var(--peach);padding:2px 0 2px 20px;
+  display:flex;flex-direction:column;gap:4px;
+}
+.stat-rule b{font-size:24px;font-weight:900;letter-spacing:.5px;line-height:1.5;color:var(--navy);}
+.stat-rule span{font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:var(--grey);text-transform:uppercase;}
+
+/* ============================================================
+   05 HOW IT WORKS
+   ============================================================ */
+.how{background:var(--cream);padding:96px 0;}
+.how__rule{padding:0 80px;}
+.how__rule i{display:block;height:1px;background:var(--sky);}
+.how__head{padding:0 80px;display:flex;align-items:center;margin-top:44px;}
+.how__indent{flex:0 0 218px;}
+.how__headcontent{flex:0 0 800px;max-width:800px;}
+.how__headcontent h2{max-width:628px;margin:0;}
+.how__headcontent p{max-width:628px;margin:22px 0 0;font-size:26px;font-weight:300;letter-spacing:.5px;line-height:1.2;color:var(--grey);}
+.how__ctaslot{flex:1 1 auto;display:flex;justify-content:flex-end;}
+.how__ctaslot .pill{padding:14px 28px 12px;}
+.how__ctaslot .pill svg{width:14px;height:14px;flex:0 0 14px;}
+.stairs{padding:0 80px;margin-top:64px;display:flex;align-items:flex-start;}
+.stairs__indent{flex:0 0 218px;}
+.step{flex:0 0 302px;margin-left:24px;display:flex;flex-direction:column;}
+.step:first-of-type{margin-left:0;}
+.step--2{padding-top:64px;}
+.step--3{padding-top:128px;}
+.step__num{font-size:60px;font-weight:900;letter-spacing:.5px;line-height:1;color:var(--navy);margin-bottom:22px;}
+.step__photo{position:relative;height:clamp(180px,25vh,250px);overflow:hidden;background-position:center;background-size:cover;background-repeat:no-repeat;}
+.step__tint{position:absolute;inset:0;background:var(--sky);mix-blend-mode:color;opacity:0;pointer-events:none;}
+.step__tint--wash{position:absolute;inset:0;background:linear-gradient(160deg,rgba(228,240,249,.55) 0%,rgba(51,76,227,.22) 100%);opacity:0;pointer-events:none;}
+.step__cap{background:var(--white);padding:24px;}
+.step__cap h3{margin:0 0 8px;font-size:24px;font-weight:900;letter-spacing:.5px;line-height:1.5;color:var(--navy);text-transform:uppercase;}
+
+/* ============================================================
+   06a STAT BAND
+   ============================================================ */
+.statband{background:var(--navy);padding:88px 64px;display:flex;gap:48px;}
+.statband__item{flex:1 1 0;}
+.statband__num{font-size:80px;font-weight:300;letter-spacing:.5px;line-height:1;color:#fff;margin-bottom:18px;}
+.statband__label{font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:#fff;margin-bottom:8px;text-transform:uppercase;}
+.statband__sub{font-size:14px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:rgba(255,255,255,.69);}
+
+/* ============================================================
+   06 RESULTS MOSAIC
+   ============================================================ */
+.results{background:var(--white);padding:80px 0;display:flex;flex-direction:column;gap:8px;}
+.results__row{padding:0 48px;display:flex;gap:8px;}
+.tile-head{flex:1 1 0;background:var(--sky);padding:32px;display:flex;flex-direction:column;justify-content:center;gap:12px;min-height:clamp(140px,18vh,180px);}
+.tile-rating{flex:1 1 0;background:var(--cream);padding:0 32px;display:flex;align-items:center;gap:22px;min-height:clamp(140px,18vh,180px);}
+.tile-rating__num{font-size:64px;font-weight:900;line-height:1;color:var(--navy);}
+.tile-rating__copy{display:flex;flex-direction:column;gap:8px;}
+.stars{display:flex;gap:3px;}
+.stars svg{width:18px;height:18px;fill:var(--peach);}
+.stars--sm svg{width:14px;height:14px;}
+.tile-rating__label{font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:var(--navy);text-transform:uppercase;}
+
+.results__mosaic{padding:0 48px;display:flex;gap:8px;align-items:stretch;}
+.col-1{flex:330 1 0;display:flex;flex-direction:column;gap:8px;}
+.col-23{flex:668 1 0;display:flex;flex-direction:column;gap:8px;}
+.col-4{flex:330 1 0;display:flex;flex-direction:column;gap:8px;}
+.mid-top{display:flex;gap:8px;height:var(--h-496);}
+.mid-top__col{flex:1 1 0;display:flex;flex-direction:column;gap:8px;}
+.bottom-row{display:flex;gap:8px;height:var(--h-240);}
+.bottom-row > *{flex:1 1 0;}
+
+.reel{position:relative;overflow:hidden;background-position:center;background-size:cover;background-repeat:no-repeat;}
+.reel--496{height:var(--h-496);flex:1 1 0;}
+.reel--492{height:var(--h-492);}
+.reel__scrim{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,.75) 100%);}
+.play-btn{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:56px;height:56px;border-radius:28px;background:#fff;
+  display:flex;align-items:center;justify-content:center;z-index:3;
+}
+.play-btn svg{width:20px;height:20px;fill:var(--navy);margin-left:2px;}
+.reel__cap{
+  position:absolute;left:20px;right:20px;bottom:26px;z-index:2;
+  font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:#fff;text-transform:uppercase;
+}
+.reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000;}
+
+.review{padding:24px;display:flex;flex-direction:column;justify-content:center;gap:10px;}
+.review--cream{background:var(--cream);}
+.review--white{background:var(--white);}
+.review p{margin:0;font-size:14px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:var(--navy);}
+.review cite{font-style:normal;font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:var(--grey);text-transform:uppercase;}
+.review--240{height:var(--h-240);}
+.review--244{height:var(--h-244);}
+
+.ba{background:var(--sky);padding:16px;display:flex;flex-direction:column;justify-content:center;gap:24px;}
+.ba__pair{display:flex;gap:8px;flex:1 1 auto;min-height:0;}
+.ba__pair > div{flex:1 1 0;min-width:0;min-height:0;display:flex;flex-direction:column;gap:6px;}
+.ba__frame{flex:1 1 auto;min-height:clamp(120px,16vh,180px);overflow:hidden;}
+.ba__img{height:100%;background-position:center top;background-size:cover;background-repeat:no-repeat;will-change:transform;}
+.ba__bar{flex:0 0 24px;height:24px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;letter-spacing:1px;line-height:1.4;text-transform:uppercase;}
+
+/* ============================================================
+   07 COMPARISON
+   ============================================================ */
+.compare{background:var(--white);padding:104px 64px;}
+.compare__head{display:flex;align-items:flex-end;gap:64px;}
+.compare__head-left{flex:1 1 auto;display:flex;flex-direction:column;gap:22px;}
+.compare__lede{flex:0 0 460px;}
+.ctable{margin-top:56px;}
+.ctable__row{display:flex;border-bottom:1px solid var(--sky);}
+.ctable__row:last-child{border-bottom:0;}
+.ctable__label{flex:0 0 240px;padding:24px 24px 24px 0;}
+.ctable__label span{font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:var(--navy);text-transform:uppercase;}
+.ctable__cell{flex:1 1 0;padding:24px;background:var(--white);display:flex;align-items:center;justify-content:center;text-align:center;}
+.ctable__cell span{font-size:16px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:var(--grey);}
+.ctable__cell--hero{background:var(--sky);border-left:2px solid var(--navy);border-right:2px solid var(--navy);}
+.ctable__cell--hero span{color:var(--navy);font-weight:700;}
+.ctable__row--head .ctable__cell{flex-direction:column;gap:16px;padding:28px 24px;}
+.ctable__row--head .ctable__cell--hero{border-top:2px solid var(--navy);}
+.ctable__row:last-child .ctable__cell--hero{border-bottom:2px solid var(--navy);}
+.ctable__mark{height:44px;display:flex;align-items:center;justify-content:center;width:100%;}
+.ctable__mark img{max-height:40px;width:auto;object-fit:contain;}
+.ctable__head-label{font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:var(--navy);text-transform:uppercase;text-align:center;}
+.ctable__corner{padding:28px 24px 28px 0;flex:0 0 240px;}
+.compare__note{margin-top:28px;}
+
+/* ============================================================
+   08 COST
+   ============================================================ */
+.cost__copy{flex:0 0 60%;}
+.cost__lede{font-size:26px;font-weight:300;letter-spacing:.5px;line-height:1.2;color:var(--grey);margin:0;}
+.cost-row{display:flex;gap:32px;padding:24px 0;border-bottom:1px solid rgba(43,54,119,.2);}
+.cost-row--first{border-top:1px solid rgba(43,54,119,.2);}
+.cost-row__fig{flex:0 0 230px;display:flex;flex-direction:column;gap:6px;}
+.cost-row__fig b{font-size:32px;font-weight:300;letter-spacing:.5px;line-height:1;color:var(--navy);}
+.cost-row__fig b.strong{font-size:36px;font-weight:900;}
+.cost-row__body{flex:1 1 auto;}
+.cost-offer{background:var(--white);padding:32px 36px;display:flex;flex-direction:column;gap:18px;margin-top:36px;}
+.cost-offer__amount{font-size:24px;font-weight:900;letter-spacing:.5px;line-height:1.5;color:var(--navy);}
+.cost-offer__points{display:flex;gap:28px;}
+.cost-offer__points > div{flex:1 1 0;display:flex;flex-direction:column;gap:12px;}
+.cost-offer__points svg{width:20px;height:20px;stroke:var(--navy);}
+.cost-offer__points p{margin:0;font-size:14px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:var(--grey);}
+
+/* ============================================================
+   09 QUIZ
+   ============================================================ */
+.quiz__photo{flex:0 0 50%;min-height:clamp(380px,62vh,620px);}
+.quiz__panel{flex:0 0 50%;background:var(--cream);padding:72px;}
+.quiz__panel h2{margin:22px 0 0;white-space:pre-line;}
+.quiz__progress-label{margin-top:34px;font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:var(--grey);text-transform:uppercase;}
+.quiz__bar{display:flex;gap:6px;margin-top:12px;}
+.quiz__bar i{flex:1 1 0;height:4px;background:rgba(43,54,119,.18);display:block;}
+.quiz__bar i.on{background:var(--navy);}
+.quiz__q{margin-top:32px;font-size:24px;font-weight:300;letter-spacing:.5px;line-height:1.33;color:var(--navy);}
+.quiz__options{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;align-content:flex-start;min-height:100px;}
+.quiz__opt{
+  height:44px;border-radius:var(--radius-pill);background:var(--cream);
+  border:var(--border-cta) solid var(--sand);color:var(--navy);
+  font-size:12px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;
+  padding:0 26px;display:inline-flex;align-items:center;
+}
+.quiz__opt.sel{background:var(--navy);border-color:var(--navy);color:#fff;}
+.quiz__nextrow{margin-top:26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.quiz__next{height:44px;border-radius:var(--radius-pill);background:var(--blue-action);color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 26px;
+  font-size:12px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;}
+.quiz__next svg{width:14px;height:14px;}
+.quiz__note{font-size:10px;font-weight:300;letter-spacing:1px;line-height:1.6;color:var(--grey);text-transform:uppercase;}
+.quiz__result{display:none;margin-top:32px;}
+.quiz__result h3{margin:0 0 14px;font-size:32px;font-weight:900;line-height:1.2;color:var(--navy);}
+
+/* ============================================================
+   10 TESTIMONIALS
+   ============================================================ */
+.testi{background:var(--white);padding:84px 96px 88px;display:flex;flex-direction:column;gap:36px;}
+.testi__head{display:flex;justify-content:space-between;align-items:flex-end;gap:64px;}
+.testi__head-left{flex:0 1 800px;display:flex;flex-direction:column;gap:14px;}
+.testi__note{flex:0 0 360px;font-size:14px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:var(--navy);}
+.testi__row{display:flex;gap:32px;}
+.testi__card{flex:1 1 0;display:flex;flex-direction:column;gap:20px;}
+.testi__tile{position:relative;height:clamp(260px,38vh,380px);overflow:hidden;background-position:center;background-size:cover;}
+.testi__quote{
+  position:absolute;left:0;right:0;bottom:0;height:150px;
+  background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.45) 100%);
+  display:flex;align-items:flex-end;padding:0 28px 26px;
+}
+.testi__quote p{margin:0;font-size:26px;font-weight:300;letter-spacing:.5px;line-height:1.2;color:#fff;}
+.testi__person{display:flex;align-items:center;gap:16px;}
+.testi__person img{width:72px;height:72px;object-fit:cover;}
+.testi__person b{display:block;font-size:16px;font-weight:900;letter-spacing:.5px;line-height:1.5;color:var(--navy);margin-bottom:6px;}
+.testi__person span{font-size:10px;font-weight:300;letter-spacing:1px;line-height:1;color:var(--grey);text-transform:uppercase;}
+
+/* ============================================================
+   11 CREDIBILITY
+   ============================================================ */
+.cred__photo{flex:0 0 40%;min-height:clamp(380px,62vh,620px);}
+.cred__panel{flex:0 0 60%;background:var(--cream);padding:96px 80px;}
+.clinicians{display:flex;gap:40px;margin-top:40px;}
+.clinician{flex:1 1 0;border-left:4px solid var(--peach);padding-left:20px;display:flex;flex-direction:column;gap:8px;}
+.clinician b{font-size:24px;font-weight:900;letter-spacing:.5px;line-height:1.2;color:var(--navy);}
+.badges{display:flex;gap:32px;margin-top:44px;padding-top:32px;border-top:1px solid var(--sand);}
+.badge{flex:1 1 0;display:flex;flex-direction:column;gap:14px;}
+.badge img{width:84px;height:84px;object-fit:contain;}
+.badge b{font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:var(--navy);text-transform:uppercase;}
+
+/* ============================================================
+   12 FINAL CTA
+   ============================================================ */
+.final{background:var(--cream);padding:92px 96px 96px;display:flex;flex-direction:column;gap:44px;}
+.final__head{display:flex;flex-direction:column;gap:10px;}
+.final__leadin{font-size:34px;font-weight:300;line-height:1;color:var(--navy);}
+.final__display{display:flex;align-items:center;gap:17px;font-size:64px;font-weight:900;line-height:1.05;color:var(--navy);}
+.final__sub{max-width:900px;font-size:26px;font-weight:300;letter-spacing:.5px;line-height:1.2;color:var(--grey);margin:0;}
+.final__row{display:flex;gap:48px;align-items:flex-start;}
+.final-form{flex:0 0 560px;background:var(--white);border:2.67px solid var(--navy);padding:36px;display:flex;flex-direction:column;gap:20px;}
+.final-form h3{margin:0;font-size:36px;font-weight:900;line-height:1;color:var(--navy);}
+.final-form .field label{font-size:10px;font-weight:300;letter-spacing:1px;line-height:1;}
+.final-form .field input,.final-form .field textarea{height:48px;background:var(--offwhite);padding:0 16px;}
+.final-form .field textarea{height:104px;padding:14px 16px;resize:vertical;line-height:1.5;}
+.final-form .fields{padding:0;}
+.field-row{display:flex;gap:16px;}
+.field-row .field{flex:1 1 0;min-width:0;}
+.final-form .submit-btn{background:var(--navy);height:auto;padding:11px 26px 8px;}
+.visit{flex:1 1 auto;display:flex;flex-direction:column;gap:28px;}
+.map{position:relative;height:clamp(240px,34vh,340px);background:var(--sky);border:1px solid var(--sand);overflow:hidden;}
+.map iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.15);}
+.map__pinlabel{position:absolute;left:16px;bottom:16px;background:#fff;padding:9px 14px 8px;font-size:10px;font-weight:900;letter-spacing:1px;line-height:1;color:var(--navy);text-transform:uppercase;white-space:nowrap;box-shadow:0 1px 6px rgba(18,25,97,.14);pointer-events:none;}
+.visit__details{display:flex;gap:40px;}
+.visit__address{flex:1 1 auto;display:flex;flex-direction:column;gap:10px;}
+.visit__address b{font-size:16px;font-weight:900;letter-spacing:.5px;line-height:1.5;color:var(--navy);}
+.visit__address p{margin:0;font-size:16px;font-weight:300;letter-spacing:.5px;line-height:1.6;color:var(--grey);}
+.visit__phone{display:flex;align-items:center;gap:9px;font-size:16px;font-weight:900;letter-spacing:.5px;color:var(--navy);}
+.visit__phone svg{width:16px;height:16px;stroke:var(--navy);}
+.visit__hours{flex:0 0 260px;display:flex;flex-direction:column;gap:10px;}
+.visit__hours span:first-child{font-size:10px;font-weight:300;letter-spacing:1px;line-height:1;color:var(--navy);text-transform:uppercase;}
+.visit__hours span{font-size:14px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:var(--navy);}
+.visit__dirs{display:flex;align-items:center;gap:24px;}
+.visit__dirs .pill svg{width:14px;height:14px;flex:0 0 14px;}
+.reassure{display:flex;gap:24px;padding-top:32px;border-top:1px solid var(--sand);}
+.reassure > div{flex:1 1 0;display:flex;gap:11px;}
+.reassure svg{width:18px;height:18px;flex:0 0 18px;margin-top:3px;stroke:var(--navy);}
+.reassure p{margin:0;font-size:16px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:var(--navy);}
+
+/* ============================================================
+   13 FAQ
+   ============================================================ */
+.faq{background:var(--white);padding:104px 64px;}
+.faq__head{display:flex;align-items:center;gap:64px;}
+.faq__head-left{flex:1 1 auto;display:flex;flex-direction:column;gap:22px;}
+.faq__head img{flex:0 0 225px;width:225px;height:317px;object-fit:contain;}
+.faq__cols{display:flex;gap:64px;margin-top:56px;}
+.faq__col{flex:1 1 0;}
+.faq__item{border-top:1px solid rgba(43,54,119,.2);padding:26px 0;}
+.faq__q{display:flex;align-items:center;gap:24px;width:100%;text-align:left;}
+.faq__q > span:first-child{flex:1 1 auto;font-size:24px;font-weight:300;letter-spacing:.5px;line-height:1.33;color:var(--navy);}
+.faq__toggle{
+  flex:0 0 36px;width:36px;height:36px;border-radius:18px;border:var(--border-cta) solid var(--navy);
+  display:flex;align-items:center;justify-content:center;background:transparent;
+}
+.faq__toggle svg{width:16px;height:16px;stroke:var(--navy);}
+.faq__item.open .faq__toggle{background:var(--navy);border-color:var(--navy);}
+.faq__item.open .faq__toggle svg{stroke:#fff;}
+.faq__a{overflow:hidden;height:0;}
+.faq__a p{margin:14px 0 0;font-size:16px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:var(--grey);}
+
+/* ============================================================
+   14 FOOTER
+   ============================================================ */
+.footer{background:var(--navy);}
+.footer__band{display:flex;gap:64px;padding:80px 64px 56px;}
+.footer__brand{flex:0 0 380px;display:flex;flex-direction:column;gap:30px;}
+.footer__brand a.logo-link{align-self:flex-start;display:block;}
+.footer__brand img.logo{width:186px;height:55px;object-fit:contain;object-position:left center;filter:drop-shadow(0 0 0 rgba(255,158,127,0));will-change:filter,transform;}
+.footer__brand p{margin:0;font-size:14px;font-weight:300;letter-spacing:.5px;line-height:1.5;color:rgba(255,255,255,.8);}
+.footer__seals{display:flex;align-items:center;gap:18px;}
+.footer__seals img{width:84px;height:84px;object-fit:contain;}
+.footer__col{flex:1 1 0;display:flex;flex-direction:column;gap:14px;}
+.footer__col h4{margin:0 0 6px;font-size:12px;font-weight:900;letter-spacing:.5px;line-height:1.4;color:#fff;text-transform:uppercase;}
+.footer__col a,.footer__col span{font-size:12px;font-weight:300;letter-spacing:1.5px;line-height:2;color:rgba(255,255,255,.8);text-transform:uppercase;}
+.footer__col a.phone{font-size:16px;font-weight:900;letter-spacing:.5px;line-height:1.5;color:#fff;}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1280px){
+  .hero__inner{padding:0 48px;gap:40px;}
+  .trust{padding:72px 40px;gap:28px;}
+  .panel-sky,.panel-cream,.cred__panel{padding:80px 48px;}
+  .how__rule,.how__head,.stairs{padding:0 48px;}
+  .how__indent,.stairs__indent{flex-basis:0;}
+  .how__headcontent{flex:1 1 auto;}
+  .step{flex:1 1 0;}
+  .statband{padding:72px 40px;gap:32px;}
+  .compare,.faq{padding:80px 40px;}
+  .testi{padding:72px 48px;}
+  .final{padding:72px 48px;}
+  .footer__band{padding:64px 40px 48px;gap:40px;}
+  .results__row,.results__mosaic{padding:0 32px;}
+}
+@media (max-width:1080px){
+  .hero__display{font-size:72px;}
+  .hero__leadin{font-size:34px;}
+  .h-40{font-size:32px;}
+  .problem__lede{font-size:26px;}
+  .how__headcontent p,.cost__lede,.final__sub{font-size:22px;}
+  .statband__num{font-size:64px;}
+  .compare__head{flex-direction:column;align-items:flex-start;gap:24px;}
+  .compare__lede{flex:1 1 auto;}
+  .final__display{font-size:48px;}
+  .final__row{flex-direction:column;}
+  .final-form{flex:1 1 auto;width:100%;}
+  .faq__cols{gap:40px;}
+  .footer__band{flex-wrap:wrap;}
+  .footer__brand{flex:0 0 100%;}
+}
+/* tablet landscape: the nav and phone number were touching at 1024 */
+@media (max-width:1100px){
+  .hdr-inner{padding:0 40px;}
+  .hdr-hairline{left:40px;right:40px;}
+  .hdr-nav{gap:22px;margin-left:32px;}
+  .hdr-nav a{letter-spacing:1px;}
+  .hdr-right{gap:16px;}
+}
+@media (max-width:900px){
+  :root{--header-h:72px;}
+  .hdr-inner{padding:0 24px;}
+  .hdr-hairline{left:24px;right:24px;}
+  .hdr-nav,.hdr-phone{display:none;}
+  .hdr-burger{display:flex;}
+  .hdr-cta{width:auto;padding:0 18px;font-size:11px;}
+  .hero{min-height:100vh;min-height:100svh;}
+  .hero__photo{height:100%;}
+  .hero__scrim-left{width:100%;height:100%;}
+  .hero__scrim-bottom{top:0;height:100%;background:linear-gradient(to bottom,rgba(11,24,99,.35) 0%,rgba(11,24,99,.72) 100%);}
+  .hero__scrim-top{height:140px;}
+  .hero__inner{flex-direction:column;padding:0 24px 56px;gap:32px;}
+  .hero__copy{
+    padding-top:calc(var(--header-h) + 32px);max-width:none;
+    min-height:calc(100svh - var(--header-h) - 92px);justify-content:center;
+  }
+  .hero__display{font-size:clamp(34px,11vw,56px);gap:clamp(8px,2.6vw,14px);}
+  .hero__leadin{font-size:clamp(19px,5.2vw,26px);}
+  .form-panel{flex:1 1 auto;width:100%;margin-top:0;padding:24px;}
+  .trust{flex-wrap:wrap;padding:56px 24px;gap:36px 20px;}
+  .trust__item{flex:1 1 40%;}
+  .split{flex-direction:column;}
+  .problem__copy,.cost__copy,.quiz__photo,.quiz__panel,.cred__photo,.cred__panel{flex:1 1 auto;width:100%;}
+  .split__photo{min-height:280px;}
+  .quiz__photo{min-height:280px;order:-1;}
+  .cred__photo{min-height:280px;order:-1;}
+  .panel-sky,.panel-cream,.cred__panel,.quiz__panel{padding:56px 24px;}
+  .problem__details{flex-direction:column;gap:24px;}
+  .how{padding:64px 0;}
+  .how__rule,.how__head,.stairs{padding:0 24px;}
+  .how__head{flex-direction:column;align-items:flex-start;gap:28px;margin-top:32px;}
+  .how__ctaslot{justify-content:flex-start;}
+  .stairs{flex-direction:column;gap:40px;margin-top:40px;}
+  .step,.step--2,.step--3{flex:1 1 auto;margin-left:0;padding-top:0;width:100%;}
+  .statband{flex-direction:column;padding:56px 24px;gap:40px;}
+  .results{padding:48px 0;}
+  .results__row,.results__mosaic{flex-direction:column;padding:0 24px;}
+  .mid-top,.bottom-row{flex-direction:column;height:auto;}
+  .reel--496,.reel--492{height:420px;}
+  .review--240,.review--244{height:auto;min-height:0;}
+  .tile-rating{padding:28px 24px;}
+  .compare{padding:56px 0;}
+  .compare__head,.compare__note{padding:0 24px;}
+  .ctable{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:32px;padding:0 24px;}
+  .ctable__inner{min-width:860px;}
+  .cost-row{flex-direction:column;gap:10px;}
+  .cost-row__fig{flex:1 1 auto;}
+  .cost-offer{padding:24px;}
+  .cost-offer__points{flex-direction:column;gap:18px;}
+  .testi{padding:56px 24px;}
+  .testi__head{flex-direction:column;align-items:flex-start;gap:20px;}
+  /* both were sized with a px flex-basis, which becomes a HEIGHT once the
+     row flips to a column - that is what left the gap under the heading */
+  .testi__head-left,.testi__note{flex:0 1 auto;width:100%;}
+  .testi__row{flex-direction:column;gap:36px;}
+  .testi__quote p{font-size:20px;}
+  .clinicians{flex-direction:column;gap:24px;}
+  .badges{flex-direction:column;gap:24px;}
+  .final{padding:56px 24px;}
+  .final__display{font-size:38px;gap:10px;flex-wrap:wrap;}
+  .final__leadin{font-size:24px;}
+  .final-form{padding:24px;}
+  .visit__details{flex-direction:column;gap:24px;}
+  .visit__hours{flex:1 1 auto;}
+  .reassure{flex-direction:column;gap:16px;}
+  .faq{padding:56px 24px;}
+  .faq__head{flex-direction:column;align-items:flex-start;gap:28px;}
+  .faq__head img{display:none;}
+  .faq__cols{flex-direction:column;gap:0;margin-top:32px;}
+  .faq__q > span:first-child{font-size:20px;}
+  .footer__band{flex-direction:column;padding:48px 24px 40px;gap:32px;}
+  .footer__brand{flex:1 1 auto;}
+
+  /* type scales with the viewport instead of stepping at one width */
+  .h-40{font-size:clamp(22px,5.4vw,32px);}
+  .problem__lede{font-size:clamp(20px,4.6vw,26px);}
+  .how__headcontent p,.cost__lede,.final__sub{font-size:clamp(17px,4vw,22px);}
+  .step__num{font-size:clamp(40px,10vw,60px);}
+  .step__cap h3{font-size:clamp(19px,4.4vw,24px);}
+  .statband__num{font-size:clamp(44px,12vw,64px);}
+  .tile-rating__num{font-size:clamp(42px,11vw,64px);}
+  .form-panel__amount{font-size:clamp(30px,7.5vw,40px);}
+  .cost-row__fig b{font-size:clamp(24px,6vw,32px);}
+  .cost-row__fig b.strong{font-size:clamp(27px,6.8vw,36px);}
+  .quiz__q{font-size:clamp(19px,4.4vw,24px);}
+  .quiz__result h3{font-size:clamp(24px,6vw,32px);}
+  .testi__quote p{font-size:clamp(17px,4.4vw,20px);}
+  .final__display{font-size:clamp(26px,8vw,38px);}
+  .final__leadin{font-size:clamp(19px,5vw,24px);}
+  .final-form h3{font-size:clamp(26px,6.6vw,36px);}
+  .faq__q > span:first-child{font-size:clamp(17px,4.2vw,20px);}
+  .clinician b,.stat-rule b{font-size:clamp(19px,4.6vw,24px);}
+
+  /* mosaic unstacks - each tile gets its own share of the screen */
+  .reel--496,.reel--492{height:min(72vh,120vw);}
+  .review--240,.review--244{height:auto;min-height:0;}
+  .mid-top,.bottom-row{height:auto;}
+  .ba__frame{min-height:min(34vh,44vw);}
+  .testi__tile{height:min(58vh,96vw);}
+  .split__photo,.quiz__photo,.cred__photo{min-height:min(42vh,62vw);}
+  .step__photo{height:min(34vh,54vw);}
+  .map{height:min(40vh,72vw);}
+
+  /* touch targets */
+  .hdr-cta{height:44px;}
+  .pill{padding:14px 24px 12px;}
+  .faq__q{gap:16px;padding:4px 0;}
+  .quiz__opt{height:46px;}
+}
+/* tablet portrait */
+@media (max-width:820px){
+  .testi__row{gap:28px;}
+  .results__row{gap:8px;}
+  .cost-offer{padding:22px;}
+}
+/* phone */
+@media (max-width:560px){
+  .ctable__inner{min-width:660px;}
+  .ctable__label,.ctable__corner{flex:0 0 132px;padding-right:14px;}
+  .ctable__label span{font-size:11px;letter-spacing:.3px;}
+  .ctable__cell{padding:18px 12px;}
+  .ctable__cell span{font-size:14px;}
+  .ctable__row--head .ctable__cell{padding:20px 12px;gap:12px;}
+  .ctable__mark img{max-height:30px;}
+  .ctable__head-label{font-size:11px;letter-spacing:.3px;}
+  .hero__ctas{flex-direction:column;align-items:stretch;}
+  .hero__ctas .pill{width:100%;}
+  .trust{flex-direction:column;gap:32px;}
+  .trust__item{flex:1 1 auto;}
+  .quiz__opt{width:100%;justify-content:center;text-align:center;}
+  .field-row{flex-direction:column;gap:16px;}
+  .visit__dirs{flex-direction:column;align-items:stretch;gap:14px;}
+  .visit__dirs .pill{width:100%;}
+  .footer__seals img{width:68px;height:68px;}
+  .reel--496,.reel--492{height:min(70vh,132vw);}
+  .ba__frame{min-height:min(30vh,46vw);}
+}
+/* the header runs out of room before anything else does */
+@media (max-width:440px){
+  .hdr-logo{width:124px;height:38px;}
+  .hdr-right{gap:10px;}
+  .hdr-cta{padding:0 12px;font-size:10px;letter-spacing:.3px;gap:0;}
+  .hdr-cta svg{display:none;}
+  .hdr-burger{margin-left:4px;}
+}
+@media (max-width:365px){
+  .hdr-logo{width:104px;height:34px;}
+  .hdr-cta{padding:0 10px;font-size:9px;letter-spacing:.2px;}
+  .hdr-right{gap:6px;}
+}
+/* narrow phone - tighten the gutters, nothing else */
+@media (max-width:400px){
+  .hdr-inner{padding:0 16px;}
+  .hdr-hairline{left:16px;right:16px;}
+  .hdr-right{gap:8px;}
+  .hero__inner{padding:0 18px 44px;}
+  .panel-sky,.panel-cream,.cred__panel,.quiz__panel{padding:48px 18px;}
+  .how__rule,.how__head,.stairs,.compare__head,.compare__note,.ctable{padding-left:18px;padding-right:18px;}
+  .results__row,.results__mosaic{padding:0 18px;}
+  .statband,.trust,.testi,.final,.faq{padding-left:18px;padding-right:18px;}
+  .footer__band{padding:40px 18px 32px;}
+  .form-panel,.final-form,.cost-offer{padding:20px;}
+  .tile-head{padding:24px 22px;}
+  .tile-rating{padding:24px 22px;flex-wrap:wrap;gap:14px;}
+  .step__cap{padding:20px;}
+  .review{padding:20px;}
+}
+/* landscape phone - don't let a full-height hero swallow the fold */
+@media (max-height:560px) and (orientation:landscape){
+  :root{--header-h:60px;}
+  .hero__copy{min-height:0;padding-top:calc(var(--header-h) + 18px);padding-bottom:20px;gap:12px;}
+  .hero__display{font-size:clamp(30px,5.4vw,44px);}
+  .hero__leadin{font-size:clamp(17px,2.6vw,22px);}
+  .hero__sub{font-size:14px;max-width:62ch;}
+  .hero__ctas{flex-direction:row;flex-wrap:wrap;}
+  .hero__ctas .pill{width:auto;padding:11px 22px 9px;}
+  .split__photo,.quiz__photo,.cred__photo{min-height:340px;}
+  .reel--496,.reel--492{height:min(150vh,70vw);}
+  .testi__tile{height:min(130vh,52vw);}
+  .step__photo{height:min(110vh,30vw);}
+  .map{height:min(140vh,44vw);}
+}
+/* on touch the same treatments run on tap, driven by JS - see section A/F */
+@media (hover:none){
+  .step__photo,.ba__frame,.trust__item{cursor:pointer;-webkit-tap-highlight-color:transparent;}
+  .step__photo.is-tapped,.ba__frame.is-tapped{outline:2px solid rgba(255,158,127,.55);outline-offset:-2px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001s !important;transition-duration:.001s !important;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================ HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="hdr-inner">
+    <a href="#top" class="hdr-logo-link">
+      <img class="hdr-logo hdr-logo--white" src="images/miraDry-Logo_FINAL_white_RGB.png" alt="miraDry">
+      <img class="hdr-logo hdr-logo--navy" src="images/miraDry-Logo_FINAL_RGB.png" alt="miraDry">
+    </a>
+    <nav class="hdr-nav">
+      <a href="#how-it-works">How it works<span class="ul"></span></a>
+      <a href="#results">Results<span class="ul"></span></a>
+      <a href="#cost">Cost<span class="ul"></span></a>
+      <a href="#reviews">Reviews<span class="ul"></span></a>
+      <a href="#faq">FAQ<span class="ul"></span></a>
+    </nav>
+    <div class="hdr-right">
+      <a class="hdr-phone" href="tel:+18667932879">(866) 793-2879</a>
+      <a class="pill hdr-cta" href="#book">Book &amp; save $250
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <button class="hdr-burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+    <i class="hdr-hairline"></i>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <div class="drawer__overlay"></div>
+  <div class="drawer__inner">
+    <button class="drawer__close" id="drawerClose" aria-label="Close menu"><i></i><i></i></button>
+    <a href="#how-it-works">How it works</a>
+    <a href="#results">Results</a>
+    <a href="#cost">Cost</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="tel:+18667932879">(866) 793-2879</a>
+    <a href="#book">Book &amp; save $250</a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ============================================================ 01 HERO -->
+<section class="hero" id="hero">
+  <div class="hero__photo" data-parallax></div>
+  <div class="hero__scrim-bottom"></div>
+  <div class="hero__scrim-left"></div>
+  <div class="hero__scrim-top"></div>
+
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <div class="hero__eyebrow" data-hero>FDA-cleared &middot; Permanent results</div>
+      <div class="hero__headgroup">
+        <p class="hero__leadin" data-hero>One hour in our clinic and you're</p>
+        <h1 class="hero__display" data-hero><em>finally</em><span>dry.</span></h1>
+      </div>
+      <p class="hero__sub" data-hero>The only FDA-cleared treatment that uses thermal energy to permanently eliminate underarm sweat and odor glands while reducing underarm hair. Non-surgical, performed in our office.</p>
+      <div class="hero__offer" data-hero>$250 off your miraDry treatment &middot; Limited-time offer</div>
+      <div class="hero__ctas" data-hero>
+        <a class="pill pill--cream" href="#book">Book &amp; save $250
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a class="pill pill--ghost-light" href="tel:+18667932879">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (866) 793-2879
+        </a>
+      </div>
+    </div>
+
+    <form class="form-panel" id="book" data-hero novalidate>
+      <div class="eyebrow-12">Complimentary consultation</div>
+      <div class="form-panel__offer">
+        <span class="form-panel__amount">$250 off</span>
+        <span class="form-panel__qual">your treatment</span>
+      </div>
+      <p class="form-panel__sub">Tell us where to reach you and we'll confirm your consultation time.</p>
+      <div class="fields">
+        <div class="field"><label for="f-first">First name</label><input id="f-first" name="first" type="text" placeholder="Jordan" required></div>
+        <div class="field"><label for="f-last">Last name</label><input id="f-last" name="last" type="text" placeholder="Alvarez" required></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" placeholder="(408) 555-0142" required></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" placeholder="you@email.com" required></div>
+      </div>
+      <button class="submit-btn" type="submit">
+        <span class="spinner"></span>
+        <span class="submit-label">Book my consultation</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </button>
+      <div class="form-ok">Thank you. We'll call you shortly to confirm your consultation.</div>
+      <p class="consent">By submitting you agree to be contacted about your consultation. No spam. See our privacy policy.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================================ 03 TRUST STRIP -->
+<section class="trust" id="trustStrip">
+  <div class="trust__item">
+    <svg class="trust__icon" viewBox="0 0 64 64" width="76" height="76" aria-hidden="true" focusable="false"><path d="m16.64 15c-9.14499968 0-16.64 7.4950003-16.64 16.64v.12c.06500006 9.16 7.46499968 16.52 16.64 16.52 7.2950003 0 11.1449997-4.6 13.96-10.36-.5099994-1.0249997-.8899994-2.0550003-1.4-3.08-2.6899994 6.0150003-5.9049997 10.88-12.56 10.88-7.74 0-13.97500032-6.1649997-14.08-13.88.00499968-.0649997.00499968-.1350003 0-.2 0-7.7499994 6.33000064-14.08 14.08-14.08 4.1150003 0 6.6900006 1.6500006 8.84 4.32 2.1500006 2.6700006 3.72 6.4 5.32 10.24s3.2300006 7.7900006 5.72 10.88c2.4900006 3.0900006 5.9950003 5.28 10.84 5.28 9.1449997 0 16.64-7.4950003 16.64-16.64 0-.04 0-.08 0-.12-.0649997-9.16-7.4649997-16.52-16.64-16.52-7.2950003 0-11.1449997 4.6100006-13.96 10.24.5100006 1.0249997.8900006 2.0550003 1.4 3.08 2.6900006-5.8899994 5.9049997-10.76 12.56-10.76 7.74 0 13.9750003 6.1649997 14.08 13.88-.0049997.0649997-.0049997.1350003 0 .2 0 7.7500006-6.3299994 14.08-14.08 14.08-4.1150003 0-6.6899994-1.6499994-8.84-4.32-2.1499994-2.6699994-3.72-6.4-5.32-10.24s-3.2299994-7.7899994-5.72-10.88c-2.4899994-3.0899994-5.9950003-5.28-10.84-5.28z"></path><path d="m29.2 34.84c.5100006 1.0249997.8900006 2.0550003 1.4 3.08-.6044253 1.2367636-1.2565671 2.4200477-1.980282 3.5157998l-1.2804195-2.8707368c.6651186-1.161712 1.2753401-2.4161597 1.8607015-3.725063z"></path><path d="m38.0082303 18.6244432.9401517 2.7906742c-1.6563391 1.8759648-2.9541016 4.2898979-4.148382 6.9048826-.5099994-1.0249997-.8899994-2.0550003-1.4-3.08 1.257785-2.5155695 2.7222013-4.8275025 4.6082303-6.6155568z"></path></svg>
+    <div class="trust__label">Permanent results</div>
+    <div class="trust__body">The sweat and odor glands we eliminate do not regenerate.</div>
+  </div>
+  <div class="trust__item">
+    <svg class="trust__icon" viewBox="0 0 64 64" width="76" height="76" aria-hidden="true" focusable="false"><path d="m47.2928932 15.2928932c.3905243-.3905243 1.0236893-.3905243 1.4142136 0 .3604839.360484.3882135.927715.0831886 1.3200062l-.0831886.0942074-15.4252214 15.4248932 8.0550842 12.3207506c.3022375.4622456.1725253 1.0819815-.2897202 1.384219-.4292281.2806491-.9942514.1888518-1.3147673-.1957936l-.0694517-.0939266-8.5-13-.0093775-.0142082c-.0107693-.0170646-.0209725-.034384-.0306096-.0519313l.0399871.0661395c-.0277565-.0424512-.05187-.0862306-.0724174-.1309703-.0048994-.0103885-.0094028-.0206968-.013724-.031063-.0102941-.024801-.0196422-.0499631-.0279249-.0753296-.0044295-.0137359-.0086567-.0277831-.0125686-.0418994-.006135-.0217295-.0113211-.043154-.0157801-.0646611-.0034166-.0172599-.006598-.0350296-.0092968-.0528583-.0030463-.0189063-.0053672-.0379188-.0071379-.0569484-.0018306-.0215372-.0031329-.0428812-.0037547-.0642413-.0005445-.0142512-.0006432-.0286074-.0004341-.0429477.0003896-.0216784.0014001-.0436191.0031288-.0655137.001489-.0188498.0034878-.0372782.0059927-.0556307.0026764-.0201215.0060756-.0405403.0101097-.0608581.0034551-.0167529.0071703-.033186.0112965-.0495185.0045263-.0185925.0098058-.0372649.0156379-.055801.0348276-.1099982.0885369-.2144164.1601665-.3077968.0013709-.0015197.0023739-.0028163.0033806-.0041109l.0144103-.0184008c.0162194-.0199239.0332832-.0393043.0511795-.0580852z"></path><path d="m32 0c17.673112 0 32 14.326888 32 32s-14.326888 32-32 32-32-14.326888-32-32 14.326888-32 32-32zm0 2c-16.5685425 0-30 13.4314575-30 30s13.4314575 30 30 30 30-13.4314575 30-30-13.4314575-30-30-30zm0 26c2.209139 0 4 1.790861 4 4s-1.790861 4-4 4-4-1.790861-4-4 1.790861-4 4-4z"></path></svg>
+    <div class="trust__label">About one hour</div>
+    <div class="trust__body">One in-office visit. Non-surgical, with little to no downtime.</div>
+  </div>
+  <div class="trust__item">
+    <svg class="trust__icon" viewBox="0 0 64 64" width="76" height="76" aria-hidden="true" focusable="false"><path d="m47 1c2.2850049 0 3.8848154.55654343 6.3711196 2.08350208l.6409542.40219615.6833487.44406718 1.0010185.66136304.5973154.38310807c.0961213.0605963.1905947.11958611.2835217.17700101l.5398184.32584288c1.917253 1.12731264 3.1843879 1.52291959 4.8829035 1.52291959.5522847 0 1 .44771525 1 1s-.4477153 1-1 1c-2.2850049 0-3.8848154-.55654343-6.3711196-2.08350208l-.6409542-.40219615-.6833487-.44406718-1.0010185-.66136304-.5973154-.38310807c-.0961213-.0605963-.1905947-.11958611-.2835217-.17700101l-.5398184-.32584288c-1.917253-1.12731264-3.1843879-1.52291959-4.8829035-1.52291959s-2.9656505.39560695-4.8829035 1.52291959l-.5398184.32584288c-.092927.0574149-.1874004.11640471-.2835217.17700101l-.5973154.38310807-1.0010185.66136304-.6833487.44406718-.6409542.40219615c-2.4863042 1.52695865-4.0861147 2.08350208-6.3711196 2.08350208s-3.8848154-.55654343-6.3711196-2.08350208l-.6409542-.40219615-.6833487-.44406718-1.0010185-.66136304-.5973154-.38310807c-.0961213-.0605963-.1905947-.11958611-.2835217-.17700101l-.5398184-.32584288c-1.917253-1.12731264-3.1843879-1.52291959-4.8829035-1.52291959s-2.9656505.39560695-4.8829035 1.52291959l-.5398184.32584288c-.092927.0574149-.1874004.11640471-.2835217.17700101l-.5973154.38310807-1.00101848.66136304-.68334871.44406718-.64095421.40219615c-2.48630422 1.52695865-4.08611469 2.08350208-6.3711196 2.08350208-.55228475 0-1-.44771525-1-1s.44771525-1 1-1c1.69851562 0 2.96565053-.39560695 4.88290353-1.52291959l.53981836-.32584288c.09292701-.0574149.18740038-.11640471.28352168-.17700101l.59731539-.38310807 1.00101852-.66136304.68334871-.44406718.64095421-.40219615c2.4863042-1.52695865 4.0861147-2.08350208 6.3711196-2.08350208s3.8848154.55654343 6.3711196 2.08350208l.6409542.40219615.6833487.44406718 1.0010185.66136304.5973154.38310807c.0961213.0605963.1905947.11958611.2835217.17700101l.5398184.32584288c1.917253 1.12731264 3.1843879 1.52291959 4.8829035 1.52291959s2.9656505-.39560695 4.8829035-1.52291959l.5398184-.32584288c.092927-.0574149.1874004-.11640471.2835217-.17700101l.5973154-.38310807 1.0010185-.66136304.6833487-.44406718.6409542-.40219615c2.4863042-1.52695865 4.0861147-2.08350208 6.3711196-2.08350208zm0 54c2.2850049 0 3.8848154.5565434 6.3711196 2.0835021l.6409542.4021961.6833487.4440672 1.0010185.661363.5973154.3831081c.0961213.0605963.1905947.1195861.2835217.177001l.5398184.3258429c1.917253 1.1273127 3.1843879 1.5229196 4.8829035 1.5229196.5522847 0 1 .4477153 1 1s-.4477153 1-1 1c-2.2850049 0-3.8848154-.5565434-6.3711196-2.0835021l-.6409542-.4021961-.6833487-.4440672-1.0010185-.661363-.5973154-.3831081c-.0961213-.0605963-.1905947-.1195861-.2835217-.177001l-.5398184-.3258429c-1.917253-1.1273127-3.1843879-1.5229196-4.8829035-1.5229196s-2.9656505.3956069-4.8829035 1.5229196l-.5398184.3258429c-.092927.0574149-.1874004.1164047-.2835217.177001l-.5973154.3831081-1.0010185.661363-.6833487.4440672-.6409542.4021961c-2.4863042 1.5269587-4.0861147 2.0835021-6.3711196 2.0835021s-3.8848154-.5565434-6.3711196-2.0835021l-.6409542-.4021961-.6833487-.4440672-1.0010185-.661363-.5973154-.3831081c-.0961213-.0605963-.1905947-.1195861-.2835217-.177001l-.5398184-.3258429c-1.917253-1.1273127-3.1843879-1.5229196-4.8829035-1.5229196s-2.9656505.3956069-4.8829035 1.5229196l-.5398184.3258429c-.092927.0574149-.1874004.1164047-.2835217.177001l-.5973154.3831081-1.00101848.661363-.68334871.4440672-.64095421.4021961c-2.48630422 1.5269587-4.08611469 2.0835021-6.3711196 2.0835021-.55228475 0-1-.4477153-1-1s.44771525-1 1-1c1.69851562 0 2.96565053-.3956069 4.88290353-1.5229196l.53981836-.3258429c.09292701-.0574149.18740038-.1164047.28352168-.177001l.59731539-.3831081 1.00101852-.661363.68334871-.4440672.64095421-.4021961c2.4863042-1.5269587 4.0861147-2.0835021 6.3711196-2.0835021s3.8848154.5565434 6.3711196 2.0835021l.6409542.4021961.6833487.4440672 1.0010185.661363.5973154.3831081c.0961213.0605963.1905947.1195861.2835217.177001l.5398184.3258429c1.917253 1.1273127 3.1843879 1.5229196 4.8829035 1.5229196s2.9656505-.3956069 4.8829035-1.5229196l.5398184-.3258429c.092927-.0574149.1874004-.1164047.2835217-.177001l.5973154-.3831081 1.0010185-.661363.6833487-.4440672.6409542-.4021961c2.4863042-1.5269587 4.0861147-2.0835021 6.3711196-2.0835021zm0-18c2.2850049 0 3.8848154.5565434 6.3711196 2.0835021l.6409542.4021961.6833487.4440672 1.0010185.661363.5973154.3831081c.0961213.0605963.1905947.1195861.2835217.177001l.5398184.3258429c1.917253 1.1273127 3.1843879 1.5229196 4.8829035 1.5229196.5522847 0 1 .4477153 1 1s-.4477153 1-1 1c-2.2850049 0-3.8848154-.5565434-6.3711196-2.0835021l-.6409542-.4021961-.6833487-.4440672-1.0010185-.661363-.5973154-.3831081c-.0961213-.0605963-.1905947-.1195861-.2835217-.177001l-.5398184-.3258429c-1.917253-1.1273127-3.1843879-1.5229196-4.8829035-1.5229196s-2.9656505.3956069-4.8829035 1.5229196l-.5398184.3258429c-.092927.0574149-.1874004.1164047-.2835217.177001l-.5973154.3831081-1.0010185.661363-.6833487.4440672-.6409542.4021961c-2.4863042 1.5269587-4.0861147 2.0835021-6.3711196 2.0835021s-3.8848154-.5565434-6.3711196-2.0835021l-.6409542-.4021961-.6833487-.4440672-1.0010185-.661363-.5973154-.3831081c-.0961213-.0605963-.1905947-.1195861-.2835217-.177001l-.5398184-.3258429c-1.917253-1.1273127-3.1843879-1.5229196-4.8829035-1.5229196s-2.9656505.3956069-4.8829035 1.5229196l-.5398184.3258429c-.092927.0574149-.1874004.1164047-.2835217.177001l-.5973154.3831081-1.00101848.661363-.68334871.4440672-.64095421.4021961c-2.48630422 1.5269587-4.08611469 2.0835021-6.3711196 2.0835021-.55228475 0-1-.4477153-1-1s.44771525-1 1-1c1.69851562 0 2.96565053-.3956069 4.88290353-1.5229196l.53981836-.3258429c.09292701-.0574149.18740038-.1164047.28352168-.177001l.59731539-.3831081 1.00101852-.661363.68334871-.4440672.64095421-.4021961c2.4863042-1.5269587 4.0861147-2.0835021 6.3711196-2.0835021s3.8848154.5565434 6.3711196 2.0835021l.6409542.4021961.6833487.4440672 1.0010185.661363.5973154.3831081c.0961213.0605963.1905947.1195861.2835217.177001l.5398184.3258429c1.917253 1.1273127 3.1843879 1.5229196 4.8829035 1.5229196s2.9656505-.3956069 4.8829035-1.5229196l.5398184-.3258429c.092927-.0574149.1874004-.1164047.2835217-.177001l.5973154-.3831081 1.0010185-.661363.6833487-.4440672.6409542-.4021961c2.4863042-1.5269587 4.0861147-2.0835021 6.3711196-2.0835021z"></path><path d="m47 19c2.2850049 0 3.8848154.5565434 6.3711196 2.0835021l.6409542.4021961.6833487.4440672 1.0010185.661363.5973154.3831081c.0961213.0605963.1905947.1195861.2835217.177001l.5398184.3258429c1.917253 1.1273127 3.1843879 1.5229196 4.8829035 1.5229196.5522847 0 1 .4477153 1 1s-.4477153 1-1 1c-2.2850049 0-3.8848154-.5565434-6.3711196-2.0835021l-.6409542-.4021961-.6833487-.4440672-1.0010185-.661363-.5973154-.3831081c-.0961213-.0605963-.1905947-.1195861-.2835217-.177001l-.5398184-.3258429c-1.917253-1.1273127-3.1843879-1.5229196-4.8829035-1.5229196s-2.9656505.3956069-4.8829035 1.5229196l-.5398184.3258429c-.092927.0574149-.1874004.1164047-.2835217.177001l-.5973154.3831081-1.0010185.661363-.6833487.4440672-.6409542.4021961c-2.4863042 1.5269587-4.0861147 2.0835021-6.3711196 2.0835021s-3.8848154-.5565434-6.3711196-2.0835021l-.6409542-.4021961-.6833487-.4440672-1.0010185-.661363-.5973154-.3831081c-.0961213-.0605963-.1905947-.1195861-.2835217-.177001l-.5398184-.3258429c-1.917253-1.1273127-3.1843879-1.5229196-4.8829035-1.5229196s-2.9656505.3956069-4.8829035 1.5229196l-.5398184.3258429c-.092927.0574149-.1874004.1164047-.2835217.177001l-.5973154.3831081-1.00101848.661363-.68334871.4440672-.64095421.4021961c-2.48630422 1.5269587-4.08611469 2.0835021-6.3711196 2.0835021-.55228475 0-1-.4477153-1-1s.44771525-1 1-1c1.69851562 0 2.96565053-.3956069 4.88290353-1.5229196l.53981836-.3258429c.09292701-.0574149.18740038-.1164047.28352168-.177001l.59731539-.3831081 1.00101852-.661363.68334871-.4440672.64095421-.4021961c2.4863042-1.5269587 4.0861147-2.0835021 6.3711196-2.0835021s3.8848154.5565434 6.3711196 2.0835021l.6409542.4021961.6833487.4440672 1.0010185.661363.5973154.3831081c.0961213.0605963.1905947.1195861.2835217.177001l.5398184.3258429c1.917253 1.1273127 3.1843879 1.5229196 4.8829035 1.5229196s2.9656505-.3956069 4.8829035-1.5229196l.5398184-.3258429c.092927-.0574149.1874004-.1164047.2835217-.177001l.5973154-.3831081 1.0010185-.661363.6833487-.4440672.6409542-.4021961c2.4863042-1.5269587 4.0861147-2.0835021 6.3711196-2.0835021z"></path></svg>
+    <div class="trust__label">82% less sweat</div>
+    <div class="trust__body">Average underarm sweat reduction at 12 months.&sup1;</div>
+  </div>
+  <div class="trust__item">
+    <svg class="trust__icon" viewBox="0 0 64 64" width="76" height="76" aria-hidden="true" focusable="false"><path d="m32 .5c.5128358 0 .9355072.38604019.9932723.88337887l.0067277.11662113v2.5l-.0018967.04918711c4.9630026.49180544 8.859025 4.6121122 8.9980549 9.67090809l.0038418.2799048h-20c0-5.18633848 3.948185-9.45052893 9.0028956-9.95091183l-.0028956-.04908817v-2.5c0-.55228475.4477153-1 1-1zm.002 5.46-.8020807.07935993c-3.3057366.32724604-5.9927229 2.65751971-6.8841255 5.73024447l-.0637938.2303956h15.495l-.0559546-.2081043c-.8627192-3.00756251-3.4450717-5.3042667-6.63693-5.72329742l-.2532348-.02915913zm-.002 17.04c3.3137085 0 6 2.6862915 6 6 0 2.3604227-1.3630259 4.4024937-3.3449349 5.38207 3.1026701 1.0100868 5.3449349 3.9271539 5.3449349 7.36793v5.75c0 1.0543618-.8158778 1.9181651-1.8507377 1.9945143l-.1492623.0054857v10.5c0 2.209139-1.790861 4-4 4h-4c-2.209139 0-4-1.790861-4-4v-10.5c-1.1045695 0-2-.8954305-2-2v-5.75c0-3.4407761 2.2422648-6.3578432 5.3452805-7.3696872-1.9822546-.9778191-3.3452805-3.0198901-3.3452805-5.3803128 0-3.3137085 2.6862915-6 6-6zm.25 13h-.5c-3.1017853 0-5.629937 2.4560172-5.7458479 5.5294443l-.0041521.2205557v5.75l.1492623.0054857c.9831169.0725317 1.7686025.8557408 1.8446932 1.8378638l.0060445.1566505v10.5c0 1.0543618.8158778 1.9181651 1.8507377 1.9945143l.1492623.0054857h4c1.0543618 0 1.9181651-.8158778 1.9945143-1.8507377l.0054857-.1492623v-10.5c0-1.0247476.7721414-1.8745858 1.7745279-1.9873365l.1520171-.0113141.073455-.0013494v-5.75c0-3.1017853-2.4560172-5.629937-5.5294443-5.7458479zm-.25-11c-2.209139 0-4 1.790861-4 4s1.790861 4 4 4 4-1.790861 4-4-1.790861-4-4-4z"></path><path d="m23.5 20c.8284271 0 1.5-.6715729 1.5-1.5s-.6715729-1.5-1.5-1.5-1.5.6715729-1.5 1.5.6715729 1.5 1.5 1.5zm6 0c.8284271 0 1.5-.6715729 1.5-1.5s-.6715729-1.5-1.5-1.5-1.5.6715729-1.5 1.5.6715729 1.5 1.5 1.5zm6 0c.8284271 0 1.5-.6715729 1.5-1.5s-.6715729-1.5-1.5-1.5-1.5.6715729-1.5 1.5.6715729 1.5 1.5 1.5zm6 0c.8284271 0 1.5-.6715729 1.5-1.5s-.6715729-1.5-1.5-1.5-1.5.6715729-1.5 1.5.6715729 1.5 1.5 1.5zm2 6c.8284271 0 1.5-.6715729 1.5-1.5s-.6715729-1.5-1.5-1.5-1.5.6715729-1.5 1.5.6715729 1.5 1.5 1.5zm2 6c.8284271 0 1.5-.6715729 1.5-1.5s-.6715729-1.5-1.5-1.5-1.5.6715729-1.5 1.5.6715729 1.5 1.5 1.5zm2 6c.8284271 0 1.5-.6715729 1.5-1.5s-.6715729-1.5-1.5-1.5-1.5.6715729-1.5 1.5.6715729 1.5 1.5 1.5zm2 6c.8284271 0 1.5-.6715729 1.5-1.5s-.6715729-1.5-1.5-1.5-1.5.6715729-1.5 1.5.6715729 1.5 1.5 1.5zm-28-18c-.8284271 0-1.5-.6715729-1.5-1.5s.6715729-1.5 1.5-1.5 1.5.6715729 1.5 1.5-.6715729 1.5-1.5 1.5zm-2 6c-.8284271 0-1.5-.6715729-1.5-1.5s.6715729-1.5 1.5-1.5 1.5.6715729 1.5 1.5-.6715729 1.5-1.5 1.5zm-2 6c-.8284271 0-1.5-.6715729-1.5-1.5s.6715729-1.5 1.5-1.5 1.5.6715729 1.5 1.5-.6715729 1.5-1.5 1.5zm-2 6c-.8284271 0-1.5-.6715729-1.5-1.5s.6715729-1.5 1.5-1.5 1.5.6715729 1.5 1.5-.6715729 1.5-1.5 1.5z"></path></svg>
+    <div class="trust__label">89% odor-free</div>
+    <div class="trust__body">Of patients no longer bothered by underarm odor at 24 months.&sup2;</div>
+  </div>
+  <div class="trust__item">
+    <svg class="trust__icon" viewBox="0 0 64 64" width="76" height="76" aria-hidden="true" focusable="false"><path d="m32 .25c.5522847 0 1 .44771525 1 1l-.0001836 11.184 6.8148189-6.41219999c.4021738-.37851647 1.0350482-.35933846 1.4135647.04283529.3493998.37123731.3599357.93904801.0431686 1.32192029l-.0860039.0916444-8.1855483 7.70380001v.059l5.4739798 5.9492686 8.1460202 1.8227314.768-.425 2.8899837-10.1127211.0385071-.1102858c.192172-.4623337.704634-.7174039 1.1977379-.576517l.1102858.0385071c.4623337.192172.7174039.704634.576517 1.1977379l-2.3420315 8.1952789 9.6568677-5.3448932c.4831902-.2674803 1.0917288-.0926129 1.3592091.3905773.2483746.4486766.115337 1.0054343-.2918046 1.2968416l-.0987727.0623675-9.5944995 5.3101068 8.612625 2.3502362.1107417.0371757c.4646153.1865881.7258408.69594.5909047 1.1907055-.1453157.5328244-.6950569.8469622-1.2278812.7016464l-10.5963902-2.8907638-1.257.696-2.2636813 7.23 2.2626813 7.228.653.361 11.2013902-3.0537704c.5328243-.1453157 1.0825655.1688221 1.2278812.7016464.1349361.4947655-.1262894 1.0041174-.5909047 1.1907055l-.1107417.0371758-9.218625 2.5132427 10.2004995 5.6471068.0987727.0623675c.4071416.2914073.5401792.848165.2918046 1.2968416-.2674803.4831902-.8760189.6580576-1.3592091.3905773l-9.4868677-5.2518932 2.1720315 7.6022723c.1408869.493104-.1141833 1.005566-.576517 1.1977379l-.1102858.0385072c-.4931039.1408868-1.0055659-.1141833-1.1977379-.5765171l-.0385071-.1102857-2.7209837-9.5207146-.936-.518-8.1470202 1.8237314-5.4739798 5.9492686v.451l8.1855483 7.7049078.0860039.0916444c.3167671.3828723.3062312.950683-.0431686 1.3219203-.3785165.4021737-1.0113909.4213518-1.4135647.0428353l-6.8148189-6.4133078.0001836 10.292-.0067277.1166211c-.0577651.4973387-.4804365.8833789-.9932723.8833789-.5522847 0-1-.4477153-1-1l-.0001836-10.192-6.2927096 6.2922146-.0942074.0831886c-.3922912.3050249-.9595222.2772953-1.3200062-.0831886-.3905243-.3905243-.3905243-1.0236893 0-1.4142136l7.7069232-7.708001v-.661l-5.2966981-5.7572686-8.2743019-1.8517314-.703.389-2.7642925 9.6777146-.0385071.1102857c-.192172.4623338-.704634.7174039-1.1977379.5765171l-.1102858-.0385072c-.4623337-.1921719-.7174039-.7046339-.576517-1.1977379l2.2163403-7.7602723-9.77050052 5.4098932c-.48319017.2674803-1.09172881.0926129-1.35920909-.3905773-.24837454-.4486766-.11533703-1.0054343.29180464-1.2968416l.09877269-.0623675 10.27813228-5.6901068-9.05693381-2.4702427-.11074166-.0371758c-.46461536-.1865881-.72584079-.69594-.59090475-1.1907055.14531573-.5328243.69505688-.8469621 1.22788123-.7016464l11.03969899 3.0107704.789-.437 2.225963-7.109-2.226963-7.11-1.394-.772-10.43369899 2.8467638c-.53282435.1453158-1.0825655-.168822-1.22788123-.7016464-.13493604-.4947655.12628939-1.0041174.59090475-1.1907055l.11074166-.0371757 8.45093381-2.3062362-9.67213228-5.3541068-.09877269-.0623675c-.40714167-.2914073-.54017918-.848165-.29180464-1.2968416.26748028-.4831902.87601892-.6580576 1.35920909-.3905773l9.94050052 5.5038932-2.3863403-8.3542789c-.1408869-.4931039.1141833-1.0055659.576517-1.1977379l.1102858-.0385071c.4931039-.1408869 1.0055659.1141833 1.1977379.576517l.0385071.1102858 2.9342925 10.2707211.534.296 8.2733019-1.8517314 5.2966981-5.7572686v-.269l-7.7069232-7.70689322c-.3905243-.39052429-.3905243-1.02368927 0-1.41421356.360484-.36048396.927715-.3882135 1.3200062-.08318861l.0942074.08318861 6.2927096 6.29110678.0001836-11.084.0067277-.11662113c.0577651-.49733868.4804365-.88337887.9932723-.88337887zm.9998164 33.696v12.357l4.4261138-4.8082258 6.5568862-1.4687742zm-2-.001-10.932 6.052 6.683168 1.4977742 4.248832 4.6172258zm13.586-7.521-10.523 5.825 10.525 5.826-1.8244134-5.825zm-24.96.119 1.7876951 5.707-1.7876951 5.706 10.309-5.707zm11.374-8.157-4.248832 4.6192258-6.687168 1.4947742 10.936 6.054zm2-.192v12.359l10.984-6.081-6.5578862-1.4667742z"></path></svg>
+    <div class="trust__label">Cooling comfort</div>
+    <div class="trust__body">The handpiece cools the skin's surface throughout treatment.</div>
+  </div>
+</section>
+
+<!-- ============================================================ 04 PROBLEM -->
+<section class="split" id="problem">
+  <div class="problem__copy panel-sky reveal">
+    <div class="eyebrow-16">The problem, named</div>
+    <h2 class="h-40" style="margin-top:26px">Antiperspirant treats the surface. The glands keep working.</h2>
+    <p class="problem__lede" style="margin-top:30px">Grey is out. Light blue is out. There is a spare shirt in the car, a reapplication before the meeting, and a quiet decision to keep your arms down in the photo.</p>
+    <div class="problem__details" style="margin-top:34px">
+      <div>
+        <div class="eyebrow-12">Why it comes back</div>
+        <p class="body-16" style="margin:0">An antiperspirant plugs the duct at the skin's surface. It washes off, sweats off, and by noon the gland underneath is working exactly as it did before.</p>
+      </div>
+      <div>
+        <div class="eyebrow-12">Why it smells</div>
+        <p class="body-16" style="margin:0">Apocrine glands produce a thicker, protein- and lipid-rich sweat. Skin bacteria break it down, and that reaction, osmidrosis, is the odor.</p>
+      </div>
+    </div>
+    <div class="stat-rule" style="margin-top:36px">
+      <b>1 in 20 people, over 365 million globally, live with excessive sweating.</b>
+      <span>About 9% of young adults are affected. You are not an outlier.</span>
+    </div>
+  </div>
+  <div class="split__photo" style="background-image:url('images/hero2.jpg')" data-parallax></div>
+</section>
+
+<!-- ============================================================ 05 HOW IT WORKS -->
+<section class="how" id="how-it-works">
+  <div class="how__rule"><i></i></div>
+  <div class="how__head reveal">
+    <div class="how__indent"></div>
+    <div class="how__headcontent">
+      <h2 class="h-40">Three steps. About one hour.</h2>
+      <p>Performed in our Newport Beach clinic by a trained medical professional. Non-surgical, with little to no downtime.</p>
+    </div>
+    <div class="how__ctaslot">
+      <a class="pill pill--white" href="#book">Book &amp; save $250
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="stairs">
+    <div class="stairs__indent"></div>
+    <article class="step reveal">
+      <div class="step__num">01.</div>
+      <div class="step__photo" style="background-image:url('images/numb-it@2x.jpeg')"><span class="step__tint--wash"></span><span class="step__tint"></span></div>
+      <div class="step__cap">
+        <h3>Numb it</h3>
+        <p class="body-16" style="font-size:14px;margin:0">Local anesthetic is applied to the underarm so the treatment is comfortable from start to finish.</p>
+      </div>
+    </article>
+    <article class="step step--2 reveal">
+      <div class="step__num">02.</div>
+      <div class="step__photo" style="background-image:url('images/mark-it@2x.jpeg')"><span class="step__tint--wash"></span><span class="step__tint"></span></div>
+      <div class="step__cap">
+        <h3>Mark it</h3>
+        <p class="body-16" style="font-size:14px;margin:0">A temporary template maps the treatment area precisely, so every gland is accounted for.</p>
+      </div>
+    </article>
+    <article class="step step--3 reveal">
+      <div class="step__num">03.</div>
+      <div class="step__photo" style="background-image:url('images/treat-it@2x.jpeg')"><span class="step__tint--wash"></span><span class="step__tint"></span></div>
+      <div class="step__cap">
+        <h3>Treat it</h3>
+        <p class="body-16" style="font-size:14px;margin:0">The handpiece delivers controlled thermal energy to the sweat and odor glands while cooling protects the skin. Eliminated glands do not grow back.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ 06a STAT BAND -->
+<section class="statband reveal" data-stagger>
+  <div class="statband__item">
+    <div class="statband__num"><span class="count" data-to="82">0</span>%</div>
+    <div class="statband__label">Average sweat reduction</div>
+    <div class="statband__sub">At 12 months.&sup1;</div>
+  </div>
+  <div class="statband__item">
+    <div class="statband__num"><span class="count" data-to="89">0</span>%</div>
+    <div class="statband__label">No longer bothered by odor</div>
+    <div class="statband__sub">At 24 months.&sup2;</div>
+  </div>
+  <div class="statband__item">
+    <div class="statband__num"><span class="count" data-to="500000">0</span>+</div>
+    <div class="statband__label">Treatments performed</div>
+    <div class="statband__sub">Globally, across 45+ countries where miraDry is cleared for use.</div>
+  </div>
+</section>
+
+<!-- ============================================================ 06 RESULTS MOSAIC -->
+<section class="results" id="results">
+  <div class="results__row reveal">
+    <div class="tile-head">
+      <div class="eyebrow-16">Results</div>
+      <h2 class="h-40">People stop thinking about it.</h2>
+    </div>
+    <div class="tile-rating">
+      <div class="tile-rating__num"><span class="count" data-to="4.9" data-dec="1">0</span></div>
+      <div class="tile-rating__copy">
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="tile-rating__label">312 Google reviews &middot; Verified patients of our clinic</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="results__mosaic">
+    <!-- column 1 -->
+    <div class="col-1">
+      <div class="reel reel--496 reveal" style="background-image:url('images/poster-reels1.jpg')" data-video="images/reels1.mp4">
+        <div class="reel__scrim"></div>
+        <button class="play-btn" aria-label="Play video"><svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg></button>
+        <div class="reel__cap">Inside a miraDry treatment</div>
+      </div>
+      <div class="review review--cream review--240 reveal">
+        <div class="stars stars--sm">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p>The odor part was the thing I never said out loud to anyone. It is simply gone now.</p>
+        <cite>Megan T. &middot; 5 days ago</cite>
+      </div>
+    </div>
+
+    <!-- columns 2-3 -->
+    <div class="col-23">
+      <div class="mid-top">
+        <div class="mid-top__col">
+          <div class="review review--cream review--244 reveal">
+            <div class="stars stars--sm">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p>I wore a grey shirt to a wedding in July and thought about it exactly zero times. Two treatments and it was done.</p>
+            <cite>Sarah M. &middot; 2 weeks ago</cite>
+          </div>
+          <div class="review review--white review--244 reveal">
+            <div class="stars stars--sm">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p>I stopped keeping a spare shirt in my gym bag. That is the entire review, honestly.</p>
+            <cite>Priya R. &middot; 1 month ago</cite>
+          </div>
+        </div>
+        <div class="reel reel--496 reveal" style="background-image:url('images/poster-reels2.jpg')" data-video="images/reels2.mp4">
+          <div class="reel__scrim"></div>
+          <button class="play-btn" aria-label="Play video"><svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg></button>
+          <div class="reel__cap">Benefits of a miraDry treatment</div>
+        </div>
+      </div>
+
+      <div class="bottom-row">
+        <div class="ba reveal">
+          <div class="ba__pair">
+            <div>
+              <div class="ba__frame"><div class="ba__img" style="background-image:url('images/Landing-Page_BeforeAfter-before.jpg')"></div></div>
+              <div class="ba__bar">Before</div>
+            </div>
+            <div>
+              <div class="ba__frame"><div class="ba__img" style="background-image:url('images/Landing-Page_BeforeAfter-after.jpg')"></div></div>
+              <div class="ba__bar">After</div>
+            </div>
+          </div>
+        </div>
+        <div class="review review--cream reveal">
+          <div class="stars stars--sm">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p>I used to plan outfits around what would show. I have not thought about it once since February.</p>
+          <cite>Tom R. &middot; 3 weeks ago</cite>
+        </div>
+      </div>
+    </div>
+
+    <!-- column 4 -->
+    <div class="col-4">
+      <div class="review review--white review--244 reveal">
+        <div class="stars stars--sm">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p>Interview season used to mean an undershirt and a jacket I could never take off. Not this year.</p>
+        <cite>Daniel K. &middot; 3 weeks ago</cite>
+      </div>
+      <div class="reel reel--492 reveal" style="background-image:url('images/poster-reels3.jpg')" data-video="images/reels3.mp4">
+        <div class="reel__scrim"></div>
+        <button class="play-btn" aria-label="Play video"><svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg></button>
+        <div class="reel__cap">Tired of sweating through everything?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 07 COMPARISON -->
+<section class="compare" id="compare">
+  <div class="compare__head reveal">
+    <div class="compare__head-left">
+      <div class="eyebrow-16">miraDry vs the alternatives</div>
+      <h2 class="h-40">One treatment you finish. Or a subscription you never finish paying.</h2>
+    </div>
+    <p class="body-16 compare__lede" style="margin:0">Every other option manages the symptom on a schedule. miraDry eliminates the glands, and eliminated glands do not regenerate.</p>
+  </div>
+
+  <div class="ctable reveal">
+    <div class="ctable__inner">
+      <div class="ctable__row ctable__row--head">
+        <div class="ctable__corner"><span class="micro-10">At a glance</span></div>
+        <div class="ctable__cell ctable__cell--hero">
+          <div class="ctable__mark"><img src="images/miraDry-Logo_FINAL_RGB.png" alt="miraDry"></div>
+          <div class="ctable__head-label">miraDry</div>
+        </div>
+        <div class="ctable__cell">
+          <div class="ctable__mark"><img src="images/treatment-botox.png" alt=""></div>
+          <div class="ctable__head-label">Botox</div>
+        </div>
+        <div class="ctable__cell">
+          <div class="ctable__mark"><img src="images/treatment-rxmedication.png" alt=""></div>
+          <div class="ctable__head-label">Rx medication</div>
+        </div>
+        <div class="ctable__cell">
+          <div class="ctable__mark"><img src="images/treatment-endoscopic.png" alt=""></div>
+          <div class="ctable__head-label">Endoscopic surgery</div>
+        </div>
+      </div>
+      <div class="ctable__row"><div class="ctable__label"><span>Results</span></div><div class="ctable__cell ctable__cell--hero"><span>Permanent</span></div><div class="ctable__cell"><span>Temporary (4&ndash;6 months)</span></div><div class="ctable__cell"><span>Temporary (1&ndash;7 days)</span></div><div class="ctable__cell"><span>Permanent</span></div></div>
+      <div class="ctable__row"><div class="ctable__label"><span>Reduces sweat</span></div><div class="ctable__cell ctable__cell--hero"><span>Yes</span></div><div class="ctable__cell"><span>Yes</span></div><div class="ctable__cell"><span>Yes</span></div><div class="ctable__cell"><span>Yes</span></div></div>
+      <div class="ctable__row"><div class="ctable__label"><span>Reduces odor</span></div><div class="ctable__cell ctable__cell--hero"><span>Yes</span></div><div class="ctable__cell"><span>No</span></div><div class="ctable__cell"><span>No</span></div><div class="ctable__cell"><span>No</span></div></div>
+      <div class="ctable__row"><div class="ctable__label"><span>Reduces hair</span></div><div class="ctable__cell ctable__cell--hero"><span>Yes</span></div><div class="ctable__cell"><span>No</span></div><div class="ctable__cell"><span>No</span></div><div class="ctable__cell"><span>No</span></div></div>
+      <div class="ctable__row"><div class="ctable__label"><span>Side effects</span></div><div class="ctable__cell ctable__cell--hero"><span>Swelling, soreness, bruising</span></div><div class="ctable__cell"><span>Numbness, injection-site pain</span></div><div class="ctable__cell"><span>Itchiness, dryness</span></div><div class="ctable__cell"><span>Serious compensatory sweating</span></div></div>
+      <div class="ctable__row"><div class="ctable__label"><span>Type</span></div><div class="ctable__cell ctable__cell--hero"><span>Non-surgical</span></div><div class="ctable__cell"><span>Non-surgical</span></div><div class="ctable__cell"><span>Medication</span></div><div class="ctable__cell"><span>Surgical</span></div></div>
+      <div class="ctable__row"><div class="ctable__label"><span>Cost</span></div><div class="ctable__cell ctable__cell--hero"><span>$250 off today</span></div><div class="ctable__cell"><span>~$1,000 per treatment</span></div><div class="ctable__cell"><span>Up to $400+ a month</span></div><div class="ctable__cell"><span>~$10,000</span></div></div>
+    </div>
+  </div>
+
+  <p class="micro-10 compare__note">Figures are typical ranges reported for each treatment category &middot; miraDry pricing varies by treatment plan &middot; Sweat reduction 82% at 12 months&sup1;</p>
+</section>
+
+<!-- ============================================================ 08 COST -->
+<section class="split" id="cost">
+  <div class="cost__copy panel-sky reveal">
+    <div class="eyebrow-16">Cost &amp; financing</div>
+    <h2 class="h-40" style="margin-top:24px">Stop renting a fix. Own the result.</h2>
+    <p class="cost__lede" style="margin-top:22px">Every other option bills you again next season. Count what you are already spending.</p>
+
+    <div style="margin-top:40px">
+      <div class="cost-row cost-row--first">
+        <div class="cost-row__fig"><b>$4,800+</b><span class="micro-10">A year, every year</span></div>
+        <p class="body-16 cost-row__body" style="margin:0">Rx medication at up to $400+ a month, renewed for as long as you need it.</p>
+      </div>
+      <div class="cost-row">
+        <div class="cost-row__fig"><b>$2,000&ndash;$3,000</b><span class="micro-10">A year, forever</span></div>
+        <p class="body-16 cost-row__body" style="margin:0">Botox at roughly $1,000 per treatment, repeated two to three times a year.</p>
+      </div>
+      <div class="cost-row">
+        <div class="cost-row__fig"><b class="strong">Once</b><span class="micro-10">And done</span></div>
+        <p class="body-16 cost-row__body" style="margin:0">miraDry, optimally twice. Eliminated glands do not regenerate, so there is nothing to renew.</p>
+      </div>
+    </div>
+
+    <div class="cost-offer">
+      <div class="cost-offer__amount">$250 off your miraDry treatment, applied at your consult.</div>
+      <div class="cost-offer__points">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          <p>Financing available, from about $99/month with approved credit.</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+          <p>Your consultation is complimentary, in our Newport Beach clinic.</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
+          <p>No surprise pricing. Your quote is confirmed at the consult.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="micro-10" style="margin-top:22px">Pricing varies by provider and treatment plan &middot; Financing subject to credit approval &middot; Offer cannot be combined with other promotions</p>
+  </div>
+  <div class="split__photo" style="background-image:url('images/about_consult-min.webp')" data-parallax></div>
+</section>
+
+<!-- ============================================================ 09 QUIZ -->
+<section class="split" id="quiz">
+  <div class="quiz__photo split__photo" style="background-image:url('images/book_consult-min.webp');flex:0 0 50%" data-parallax></div>
+  <div class="quiz__panel reveal">
+    <div class="eyebrow-16">Am I a candidate?</div>
+    <h2 class="h-40">Five questions.
+About thirty seconds.</h2>
+
+    <div id="quizFlow">
+      <div class="quiz__progress-label" id="quizProgressLabel">Question 1 of 5</div>
+      <div class="quiz__bar" id="quizBar">
+        <i class="on"></i><i></i><i></i><i></i><i></i>
+      </div>
+      <div class="quiz__q" id="quizQuestion">Where do you sweat most?</div>
+      <div class="quiz__options" id="quizOptions"></div>
+      <div class="quiz__nextrow">
+        <button class="quiz__next" id="quizNext" type="button"><span id="quizNextLabel">Next question</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+        <span class="quiz__note">No email needed until the last step</span>
+      </div>
+    </div>
+
+    <div class="quiz__result" id="quizResult">
+      <h3>You look like a strong candidate.</h3>
+      <p class="body-16" style="margin:0 0 24px">Based on your answers, miraDry is worth a conversation. Book a complimentary consultation and we'll confirm it in person, with your $250 off applied.</p>
+      <a class="pill pill--navy" href="#book">Claim $250 off
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 10 TESTIMONIALS -->
+<section class="testi" id="reviews">
+  <div class="testi__head reveal">
+    <div class="testi__head-left">
+      <div class="eyebrow-12">Patient stories</div>
+      <h2 class="h-40">Two people who stopped thinking about it.</h2>
+    </div>
+    <p class="testi__note" style="margin:0">Filmed at our clinic. Individual results vary.</p>
+  </div>
+  <div class="testi__row">
+    <article class="testi__card reveal">
+      <div class="testi__tile reel" style="background-image:url('images/poster-testimonial-chad.jpg')" data-video="images/testimonial-chad.mp4">
+        <button class="play-btn" aria-label="Play Chad's story"><svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg></button>
+        <div class="testi__quote"><p>&ldquo;I stopped keeping a second shirt in my gym bag.&rdquo;</p></div>
+      </div>
+      <div class="testi__person">
+        <img src="images/avatar-chad.jpg" alt="Chad">
+        <div><b>Chad</b><span>Treated 14 months ago &middot; Two sessions</span></div>
+      </div>
+    </article>
+    <article class="testi__card reveal">
+      <div class="testi__tile reel" style="background-image:url('images/poster-testimonial-lauren.jpg')" data-video="images/testimonial-lauren.mp4">
+        <button class="play-btn" aria-label="Play Lauren's story"><svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg></button>
+        <div class="testi__quote"><p>&ldquo;I wore silk to a wedding and forgot about it all night.&rdquo;</p></div>
+      </div>
+      <div class="testi__person">
+        <img src="images/avatar-lauren.jpg" alt="Lauren">
+        <div><b>Lauren</b><span>Treated 2 years ago &middot; Two sessions</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ 11 CREDIBILITY -->
+<section class="split" id="clinic">
+  <div class="cred__photo split__photo" style="background-image:url('images/poster-reels5.jpg')" data-parallax></div>
+  <div class="cred__panel reveal">
+    <div class="eyebrow-16">Our clinic</div>
+    <h2 class="h-40" style="margin-top:22px">Certified providers, one FDA-cleared device, ten years of it.</h2>
+    <p class="body-16" style="margin-top:24px">Every miraDry treatment in our Newport Beach clinic is performed by a trained medical professional who is certified on the device. Your consultation is complimentary, and you meet the person who will treat you before you commit to anything.</p>
+
+    <div class="clinicians">
+      <div class="clinician">
+        <b>Dr. Elena Ruiz, MD</b>
+        <span class="micro-10">Medical director</span>
+        <p class="body-16" style="font-size:14px;margin:0">Board-certified dermatologist. Has overseen miraDry treatment at this clinic since 2016.</p>
+      </div>
+      <div class="clinician">
+        <b>Nina Patel, RN</b>
+        <span class="micro-10">Certified miraDry specialist</span>
+        <p class="body-16" style="font-size:14px;margin:0">Factory-certified on the miraDry console. Over 1,400 underarm treatments performed.</p>
+      </div>
+    </div>
+
+    <div class="badges">
+      <div class="badge">
+        <img src="images/Beauty_Innovation_Award-Badge_2025-miraDry_web.png" alt="">
+        <b>Beauty innovation award</b>
+        <p class="body-16" style="font-size:14px;margin:0">Body Product of the Year, 2025.</p>
+      </div>
+      <div class="badge">
+        <img src="images/ten_yr_badge_fpo-min.png" alt="">
+        <b>10 years</b>
+        <p class="body-16" style="font-size:14px;margin:0">Safe, effective, permanent results.</p>
+      </div>
+      <div class="badge">
+        <img src="images/global_sites_icon_global_palette_3.png" alt="">
+        <b>45+ countries</b>
+        <p class="body-16" style="font-size:14px;margin:0">500,000+ treatments performed globally.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 12 FINAL CTA -->
+<section class="final" id="visit">
+  <div class="final__head reveal">
+    <div class="eyebrow-12">Limited-time offer</div>
+    <div class="final__leadin">Book this month and it's</div>
+    <div class="final__display"><span>$250 off.</span><span>Done.</span></div>
+    <p class="final__sub">One hour in our office. Two treatments for optimal results. Then you stop thinking about your underarms.</p>
+  </div>
+
+  <div class="final__row">
+    <form class="final-form reveal" novalidate>
+      <h3>Claim $250 off</h3>
+      <p class="body-16" style="margin:0">We'll confirm your complimentary consultation, usually the same day.</p>
+      <div class="fields">
+        <div class="field-row">
+          <div class="field"><label for="g-first">First name</label><input id="g-first" type="text" placeholder="Jordan" required></div>
+          <div class="field"><label for="g-last">Last name</label><input id="g-last" type="text" placeholder="Ellis" required></div>
+        </div>
+        <div class="field"><label for="g-phone">Phone</label><input id="g-phone" type="tel" placeholder="(408) 555-0142" required></div>
+        <div class="field"><label for="g-email">Email</label><input id="g-email" type="email" placeholder="jordan@email.com" required></div>
+        <div class="field"><label for="g-msg">Message</label><textarea id="g-msg" placeholder="Anything you'd like us to know before your consultation."></textarea></div>
+      </div>
+      <button class="submit-btn" type="submit">
+        <span class="spinner"></span>
+        <span class="submit-label">Claim $250 off</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </button>
+      <div class="form-ok">Thank you. We'll be in touch shortly to confirm your consultation.</div>
+      <p class="consent">By submitting you agree to be contacted by our clinic by phone, text or email. Message rates may apply. See our privacy policy.</p>
+    </form>
+
+    <div class="visit reveal">
+      <div class="map">
+        <iframe
+          title="miraDry - 100 Bayview Circle, Suite 360, Newport Beach, CA 92660"
+          src="https://maps.google.com/maps?q=miraDry%2C%20100%20Bayview%20Circle%20Suite%20360%2C%20Newport%20Beach%2C%20CA%2092660&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="map__pinlabel">miraDry - Suite 360</div>
+      </div>
+
+      <div class="visit__details">
+        <div class="visit__address">
+          <b>miraDry - Underarm Sweat &amp; Odor Clinic</b>
+          <p>100 Bayview Circle, Suite 360<br>Newport Beach, CA 92660</p>
+          <a class="visit__phone" href="tel:+18667932879">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (866) 793-2879
+          </a>
+        </div>
+        <div class="visit__hours">
+          <span>Hours</span>
+          <span>Mon&ndash;Fri &middot; 9:00am&ndash;6:00pm</span>
+          <span>Sat &middot; 9:00am&ndash;2:00pm</span>
+          <span>Sun &middot; closed</span>
+        </div>
+      </div>
+
+      <div class="visit__dirs">
+        <a class="pill pill--outline-navy" href="https://www.google.com/maps/search/?api=1&amp;query=miraDry%2C%20100%20Bayview%20Circle%20Suite%20360%2C%20Newport%20Beach%2C%20CA%2092660" target="_blank" rel="noopener">Get directions
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <span class="micro-10">Free surface parking at the door &middot; Ground-floor, step-free entry &middot; Elevator to Suite 360</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="reassure reveal">
+    <div>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      <p>The consultation is complimentary, and there is no obligation to book.</p>
+    </div>
+    <div>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      <p>Your quote is confirmed in writing before anything is scheduled.</p>
+    </div>
+    <div>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      <p>Financing available from about $99/month, with approved credit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 13 FAQ -->
+<section class="faq" id="faq">
+  <div class="faq__head reveal">
+    <div class="faq__head-left">
+      <div class="eyebrow-16">Questions, answered</div>
+      <h2 class="h-40">Everything people ask before they book.</h2>
+      <p class="body-16" style="margin:0">If yours isn't here, call the clinic at (866) 793-2879 and ask. There is no charge for asking.</p>
+    </div>
+    <img src="images/biotips-min.jpg" alt="">
+  </div>
+
+  <div class="faq__cols">
+    <div class="faq__col">
+      <div class="faq__item">
+        <button class="faq__q" type="button"><span>Does it hurt?</span>
+          <span class="faq__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path class="v" d="M12 5v14"/></svg></span>
+        </button>
+        <div class="faq__a"><p>Local anesthetic is applied first and the handpiece cools the skin's surface throughout, so most patients describe it as pressure and warmth rather than pain.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button"><span>How long does it take?</span>
+          <span class="faq__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path class="v" d="M12 5v14"/></svg></span>
+        </button>
+        <div class="faq__a"><p>About an hour in our office, including the numbing and the mapping. Two treatments spaced roughly three months apart give optimal results.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button"><span>Are the results really permanent?</span>
+          <span class="faq__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path class="v" d="M12 5v14"/></svg></span>
+        </button>
+        <div class="faq__a"><p>Yes. The sweat and odor glands eliminated during treatment do not regenerate, which is why there is nothing to renew afterwards.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button"><span>Will I stop sweating everywhere?</span>
+          <span class="faq__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path class="v" d="M12 5v14"/></svg></span>
+        </button>
+        <div class="faq__a"><p>No. Only about 2% of your sweat glands sit in the underarm, so the rest of your body continues to regulate temperature exactly as before.</p></div>
+      </div>
+    </div>
+
+    <div class="faq__col">
+      <div class="faq__item">
+        <button class="faq__q" type="button"><span>What's the downtime?</span>
+          <span class="faq__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path class="v" d="M12 5v14"/></svg></span>
+        </button>
+        <div class="faq__a"><p>Most people return to normal activity right away. Expect some swelling and soreness in the underarm for a few days, and hold off on heavy workouts for about a week.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button"><span>How should I prepare?</span>
+          <span class="faq__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path class="v" d="M12 5v14"/></svg></span>
+        </button>
+        <div class="faq__a"><p>Shave the underarm a few days before, skip deodorant on the day, and wear a loose top. We cover the rest at your consultation.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button"><span>What about afterward?</span>
+          <span class="faq__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path class="v" d="M12 5v14"/></svg></span>
+        </button>
+        <div class="faq__a"><p>Ice and an over-the-counter anti-inflammatory handle most of it. Loose clothing for a few days, and no shaving or deodorant until the area settles.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button"><span>Is it FDA-cleared?</span>
+          <span class="faq__toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path class="v" d="M12 5v14"/></svg></span>
+        </button>
+        <div class="faq__a"><p>Yes. miraDry is FDA-cleared for the treatment of primary axillary hyperhidrosis and is cleared for use in more than 45 countries.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 14 FOOTER -->
+<footer class="footer">
+  <div class="footer__band">
+    <div class="footer__brand">
+      <a class="logo-link" href="#top"><img class="logo" src="images/miraDry-Logo_FINAL_white_RGB.png" alt="miraDry"></a>
+      <p>miraDry - Underarm Sweat &amp; Odor Clinic. FDA-cleared, non-surgical, permanent.</p>
+      <div class="footer__seals">
+        <img src="images/Beauty_Innovation_Award-Badge_2025-miraDry_web.png" alt="">
+        <img src="images/ten_yr_badge_fpo-min.png" alt="">
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>miraDry</h4>
+      <a href="#how-it-works">How it works</a>
+      <a href="#results">Results</a>
+      <a href="#compare">miraDry vs alternatives</a>
+      <a href="#cost">Cost &amp; financing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer__col">
+      <h4>Get started</h4>
+      <a href="#book">Book a consult</a>
+      <a href="#quiz">Am I a candidate?</a>
+      <a href="#cost">Financing options</a>
+      <a href="#results">Before &amp; after</a>
+      <a href="#clinic">Our clinic</a>
+    </div>
+    <div class="footer__col">
+      <h4>Contacts</h4>
+      <a class="phone" href="tel:+18667932879">(866) 793-2879</a>
+      <span>(866-793-2879)</span>
+      <span>100 Bayview Circle, Suite 360</span>
+      <span>Newport Beach, CA 92660</span>
+      <span>Mon&ndash;Fri 9:00am&ndash;6:00pm</span>
+      <span>Sat 9:00am&ndash;2:00pm &middot; Sun closed</span>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<!-- ============================================================ GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/DrawSVGPlugin.min.js"></script>
+<script>
+/* =======================================================================
+   miraDry LP motion - GSAP 3.15.0 + ScrollTrigger + ScrollToPlugin
+   Implements the miraDry motion & interaction language:
+   colour-only hovers, 300ms house default, power1.inOut, no overshoot.
+   ======================================================================= */
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+const HAS_DRAW = typeof DrawSVGPlugin !== 'undefined';
+if (HAS_DRAW) gsap.registerPlugin(DrawSVGPlugin);
+
+const C = {
+  navy:'#2B3677', navyDeep:'#0B1863', blue:'#334CE3', peach:'#FF9E7F',
+  paleBlue:'#E4F0F9', cream:'#FFF5EE', offwhite:'#FFFCFA', sand:'#E9D9C9',
+  white:'#FFFFFF', grey:'#626262', gfBlue:'#204CE5', gfBlueHover:'#001AB3'
+};
+const HEADER_H = () => parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'), 10) || 104;
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ----------------------------------------------------------------------
+   POINTER MODEL
+   Desktop (a real mouse): effects run on hover, exactly as before.
+   Tablet / phone (no hover): the same effects run on tap.
+     - 'flash'  buttons and links: plays on touch-down, settles back after
+     - 'toggle' photos and tiles:  first tap shows it, second tap (or a tap
+                                   anywhere else) puts it back
+   The check is made at event time, so a device with both a mouse and a
+   touchscreen behaves correctly whichever one is being used.
+   ---------------------------------------------------------------------- */
+const finePointer = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+const TAP_HOLD = 850;          /* ms a 'flash' effect stays up after a tap */
+const TAPPABLE = [];           /* every 'toggle' element, so taps elsewhere reset them */
+
+function bindPointer(el, tw, mode = 'flash'){
+  if(!el || !tw) return tw;
+  const play = () => tw.play();
+  const back = () => tw.reverse();
+
+  /* mouse + keyboard */
+  el.addEventListener('mouseenter', e => { if(finePointer() && e.pointerType !== 'touch') play(); });
+  el.addEventListener('mouseleave', e => { if(finePointer() && e.pointerType !== 'touch') back(); });
+  el.addEventListener('focus', play);
+  el.addEventListener('blur',  back);
+
+  if(mode === 'toggle'){
+    el.__tw = tw;
+    TAPPABLE.push(el);
+    el.addEventListener('click', () => {
+      if(finePointer()) return;
+      const turnOn = !el.classList.contains('is-tapped');
+      TAPPABLE.forEach(o => {
+        if(o !== el && o.classList.contains('is-tapped')){
+          o.classList.remove('is-tapped'); o.__tw.reverse();
+        }
+      });
+      el.classList.toggle('is-tapped', turnOn);
+      turnOn ? play() : back();
+    });
+  } else {
+    let t;
+    el.addEventListener('pointerdown', e => {
+      if(e.pointerType === 'mouse' || finePointer()) return;
+      clearTimeout(t); play();
+    });
+    ['pointerup','pointercancel','pointerleave'].forEach(ev =>
+      el.addEventListener(ev, e => {
+        if(e.pointerType === 'mouse' || finePointer()) return;
+        clearTimeout(t); t = setTimeout(back, TAP_HOLD);
+      }));
+  }
+  return tw;
+}
+
+/* a tap on empty page area clears any element left switched on */
+document.addEventListener('click', e => {
+  if(finePointer()) return;
+  TAPPABLE.forEach(el => {
+    if(!el.contains(e.target) && el.classList.contains('is-tapped')){
+      el.classList.remove('is-tapped'); el.__tw.reverse();
+    }
+  });
+}, true);
+
+/* helper: paused tween wired to hover on desktop / tap on touch */
+function hover(el, vars, duration = 0.3, ease = 'power1.inOut', mode = 'flash'){
+  if(!el) return;
+  const tw = gsap.to(el, Object.assign({}, vars, {duration, ease, paused:true}));
+  return bindPointer(el, tw, mode);
+}
+
+/* -------------------------------------------------- A. BUTTON HOVER (colour only) */
+gsap.utils.toArray('.pill--cream').forEach(b => hover(b, {backgroundColor:C.white}, 0.3));
+gsap.utils.toArray('.pill--white').forEach(b => hover(b, {backgroundColor:C.offwhite, borderColor:C.sand}, 0.3));
+gsap.utils.toArray('.pill--ghost-light').forEach(b => hover(b, {backgroundColor:'rgba(255,255,255,0.14)', borderColor:'rgba(255,255,255,0.9)'}, 0.3));
+gsap.utils.toArray('.pill--outline-navy').forEach(b => hover(b, {backgroundColor:C.paleBlue}, 0.3));
+gsap.utils.toArray('.pill--navy').forEach(b => hover(b, {backgroundColor:C.navyDeep, borderColor:C.navyDeep}, 0.3));
+hover(document.querySelector('.hdr-cta'), {backgroundColor:C.paleBlue}, 0.2);
+gsap.utils.toArray('.submit-btn').forEach(b => {
+  const isNavy = b.closest('.final-form');
+  hover(b, {backgroundColor: isNavy ? C.navyDeep : C.gfBlueHover}, 0.15);
+});
+gsap.utils.toArray('.quiz__next').forEach(b => hover(b, {backgroundColor:C.navyDeep}, 0.3));
+
+/* -------------------------------------------------- B. BUTTON PRESS (fallback 0.98) */
+gsap.utils.toArray('.pill, .submit-btn, .quiz__next, .quiz__opt, .play-btn').forEach(el => {
+  el.addEventListener('pointerdown', () => gsap.to(el, {scale:0.98, duration:0.1, ease:'power2.out'}));
+  ['pointerup','pointerleave','pointercancel'].forEach(ev =>
+    el.addEventListener(ev, () => gsap.to(el, {scale:1, duration:0.15, ease:'power2.out'})));
+});
+
+/* -------------------------------------------------- C. NAV underline + footer links */
+gsap.utils.toArray('.hdr-nav a').forEach(a => {
+  const bar = a.querySelector('.ul');
+  const tw = gsap.to(bar, {scaleX:1, duration:0.2, ease:'power2.out', paused:true});
+  bindPointer(a, tw, 'flash');
+});
+gsap.utils.toArray('.footer__col a').forEach(a => hover(a, {color:C.peach}, 0.3));
+
+/* -------------------------------------------------- D. STICKY HEADER */
+(() => {
+  const header = document.querySelector('#siteHeader');
+  const logoWhite = document.querySelector('.hdr-logo--white');
+  const logoNavy  = document.querySelector('.hdr-logo--navy');
+  const navLinks  = gsap.utils.toArray('.hdr-nav a');
+  const phone     = document.querySelector('.hdr-phone');
+  const hairline  = document.querySelector('.hdr-hairline');
+  const burger    = gsap.utils.toArray('.hdr-burger span');
+  const h = () => header.offsetHeight;
+  let stuck = null;
+
+  const hide = gsap.to(header, {y:() => -h(), duration:0.1, ease:'power3.in', paused:true});
+
+  function setStuck(on){
+    if(stuck === on) return;
+    stuck = on;
+    gsap.to(header, {
+      backgroundColor: on ? C.white : 'rgba(0,0,0,0)',
+      boxShadow: on ? '0 2px 18px 0 rgba(37,42,68,0.10)' : '0 2px 40px 0 rgba(37,42,68,0.4)',
+      duration:0.2, ease:'power1.inOut'
+    });
+    gsap.to(navLinks, {color: on ? C.navy : 'rgba(255,255,255,0.86)', duration:0.2, ease:'power1.inOut'});
+    gsap.to(phone,    {color: on ? C.navy : C.white, duration:0.2, ease:'power1.inOut'});
+    gsap.to(hairline, {backgroundColor: on ? 'rgba(43,54,119,0.14)' : 'rgba(255,255,255,0.14)', duration:0.2});
+    gsap.to(burger,   {backgroundColor: on ? C.navy : C.white, duration:0.2});
+    if(logoWhite && logoNavy){
+      logoWhite.style.display = on ? 'none' : 'block';
+      logoNavy.style.display  = on ? 'block' : 'none';
+    }
+  }
+  setStuck(false);
+
+  ScrollTrigger.create({
+    start:0, end:'max',
+    onUpdate: self => {
+      if(self.scroll() <= 1){ hide.reverse(); setStuck(false); return; }
+      setStuck(true);
+      self.direction === 1 ? hide.play() : hide.reverse();
+    }
+  });
+})();
+
+/* -------------------------------------------------- E. SMOOTH ANCHOR SCROLL */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if(!id || id.length < 2) return;
+    const t = document.querySelector(id);
+    if(!t) return;
+    e.preventDefault();
+    closeDrawer();
+    gsap.to(window, {duration:0.9, ease:'power1.inOut',
+      scrollTo:{y:t, offsetY: document.querySelector('#siteHeader').offsetHeight}});
+  });
+});
+
+/* -------------------------------------------------- F. SECTION REVEALS */
+gsap.utils.toArray('.reveal').forEach(el => {
+  const kids = el.hasAttribute('data-stagger') ? Array.from(el.children) : null;
+  gsap.from(kids && kids.length ? kids : el, {
+    y:60, autoAlpha:0, duration:0.8, ease:'power3.out',
+    stagger: kids ? 0.1 : 0,
+    scrollTrigger:{trigger:el, start:'top 88%', toggleActions:'play none none none'}
+  });
+});
+
+/* -------------------------------------------------- F2. TRUST ICONS DRAW ON
+   The five benefit icons under the hero are inline SVG. Each one is drawn
+   stroke-first in brand peach with DrawSVGPlugin, then the white fill floods
+   in behind the line and the guide stroke fades out. Falls back to a scale
+   and fade entrance if the plugin is unavailable.                            */
+(() => {
+  const strip = document.querySelector('#trustStrip');
+  if(!strip) return;
+  const items  = gsap.utils.toArray('#trustStrip .trust__item');
+  const icons  = gsap.utils.toArray('#trustStrip .trust__icon');
+  const labels = items.map(i => [i.querySelector('.trust__label'), i.querySelector('.trust__body')])
+                      .reduce((a, b) => a.concat(b), []);
+
+  gsap.set(labels, {autoAlpha:0, y:18});
+
+  const tl = gsap.timeline({
+    scrollTrigger:{trigger:strip, start:'top 85%', toggleActions:'play none none none'}
+  });
+
+  if(HAS_DRAW){
+    const STEP = 0.22;                       // beat between one icon and the next
+    icons.forEach((icon, n) => {
+      const paths = icon.querySelectorAll('path');
+      const at = n * STEP;
+      gsap.set(paths, {
+        fillOpacity:0, stroke:C.peach, strokeWidth:0.9, strokeOpacity:1, drawSVG:'0%'
+      });
+      tl.to(paths, {drawSVG:'100%', duration:1.15, ease:'power1.inOut', stagger:0.08}, at)
+        .to(paths, {fillOpacity:1, duration:0.55, ease:'power1.out'}, at + 0.9)
+        .to(paths, {strokeOpacity:0, duration:0.55, ease:'power1.out'}, at + 0.95);
+    });
+    tl.to(labels, {autoAlpha:1, y:0, duration:0.5, ease:'power2.out', stagger:0.06}, 0.8);
+  } else {
+    gsap.set(icons, {autoAlpha:0, y:28, scale:0.6, transformOrigin:'50% 50%'});
+    tl.to(icons,  {autoAlpha:1, y:0, scale:1, duration:0.7, ease:'power3.out', stagger:0.12})
+      .to(labels, {autoAlpha:1, y:0, duration:0.5, ease:'power2.out', stagger:0.06}, '-=0.45');
+  }
+
+  /* hover: the line is redrawn in peach over the white icon, then settles back */
+  items.forEach((item, n) => {
+    const icon  = icons[n];
+    const paths = icon.querySelectorAll('path');
+    const lift  = gsap.to(icon, {y:-6, scale:1.06, duration:0.3, ease:'power2.out',
+                                 transformOrigin:'50% 50%', paused:true});
+    let trace;
+    if(HAS_DRAW){
+      trace = gsap.timeline({paused:true})
+        .set(paths, {stroke:C.peach, strokeWidth:0.9, strokeOpacity:1, drawSVG:'0%'})
+        .to(paths, {drawSVG:'100%', duration:0.7, ease:'power1.inOut'}, 0)
+        .to(paths, {strokeOpacity:0, duration:0.4, ease:'power1.out'}, 0.55);
+    }
+    /* the trace restarts every time the lift is played, mouse or tap */
+    lift.eventCallback('onStart', () => { trace && trace.restart(); });
+    bindPointer(item, lift, 'toggle');
+  });
+})();
+
+/* -------------------------------------------------- F3. STEP PHOTO HOVER (light blue wash)
+   Target: .step__photo in "Three steps. About one hour."                     */
+gsap.utils.toArray('.step__photo').forEach(photo => {
+  const tint = photo.querySelector('.step__tint');
+  const wash = photo.querySelector('.step__tint--wash');
+  const tw = gsap.timeline({paused:true})
+    .to(tint, {opacity:0.62, duration:0.35, ease:'power1.inOut'}, 0)
+    .to(wash, {opacity:0.85, duration:0.35, ease:'power1.inOut'}, 0);
+  bindPointer(photo, tw, 'toggle');
+});
+
+/* -------------------------------------------------- F4. BEFORE / AFTER ZOOM ON HOVER
+   Target: .ba__frame > .ba__img in the results mosaic                        */
+gsap.utils.toArray('.ba__frame').forEach(frame => {
+  const img = frame.querySelector('.ba__img');
+  const tw = gsap.to(img, {scale:1.14, duration:0.5, ease:'power2.out', paused:true, transformOrigin:'50% 35%'});
+  bindPointer(frame, tw, 'toggle');
+});
+
+/* -------------------------------------------------- F5. FOOTER LOGO GLOW */
+(() => {
+  const link = document.querySelector('.footer__brand .logo-link');
+  if(!link) return;
+  const logo = link.querySelector('img');
+  const tw = gsap.timeline({paused:true})
+    .to(logo, {filter:'drop-shadow(0 0 22px rgba(255,158,127,0.85))', duration:0.35, ease:'power2.out'}, 0)
+    .to(logo, {scale:1.035, duration:0.35, ease:'power2.out'}, 0);
+  bindPointer(link, tw, 'flash');
+})();
+
+/* -------------------------------------------------- G. HERO ON-LOAD TIMELINE */
+(() => {
+  gsap.timeline({defaults:{ease:'power3.out'}, delay:0.1})
+    .from('.hero__eyebrow',  {y:20, autoAlpha:0, duration:0.6})
+    .from('.hero__leadin',   {y:30, autoAlpha:0, duration:0.7}, '-=0.35')
+    .from('.hero__display',  {y:40, autoAlpha:0, duration:0.8}, '-=0.5')
+    .from('.hero__sub',      {y:24, autoAlpha:0, duration:0.7}, '-=0.5')
+    .from('.hero__offer',    {y:16, autoAlpha:0, duration:0.5}, '-=0.5')
+    .from('.hero__ctas',     {y:20, autoAlpha:0, duration:0.6}, '-=0.4')
+    .from('.form-panel',     {y:36, autoAlpha:0, duration:0.8}, '-=0.75');
+})();
+
+/* -------------------------------------------------- H. COUNTERS */
+gsap.utils.toArray('.count').forEach(el => {
+  const to  = parseFloat(el.dataset.to) || 0;
+  const dec = parseInt(el.dataset.dec || 0, 10);
+  const o = {v:0};
+  el.textContent = dec ? (0).toFixed(dec) : '0';
+  gsap.to(o, {
+    v:to, duration:2, ease:'none',
+    scrollTrigger:{trigger:el, start:'top 90%', toggleActions:'play none none none'},
+    onUpdate: () => {
+      el.textContent = dec ? o.v.toFixed(dec) : Math.round(o.v).toLocaleString('en-US');
+    }
+  });
+});
+
+/* -------------------------------------------------- I. FAQ ACCORDION (400ms sine.inOut) */
+gsap.utils.toArray('.faq__item').forEach(item => {
+  const btn = item.querySelector('.faq__q');
+  const panel = item.querySelector('.faq__a');
+  const vbar = item.querySelector('.faq__toggle .v');
+  const open0 = item.classList.contains('open');
+  gsap.set(panel, {height: open0 ? 'auto' : 0});
+  gsap.set(vbar, {autoAlpha: open0 ? 0 : 1});
+  btn.setAttribute('aria-expanded', String(open0));
+  btn.addEventListener('click', () => {
+    const open = !item.classList.contains('open');
+    item.classList.toggle('open', open);
+    gsap.to(panel, {height: open ? 'auto' : 0, duration:0.4, ease:'sine.inOut',
+      onComplete: () => ScrollTrigger.refresh()});
+    gsap.to(vbar, {autoAlpha: open ? 0 : 1, duration:0.2, ease:'power1.inOut'});
+    btn.setAttribute('aria-expanded', String(open));
+  });
+});
+
+/* -------------------------------------------------- J. FORM FIELD FOCUS + SUBMIT */
+gsap.utils.toArray('.field input, .field textarea').forEach(f => {
+  f.addEventListener('focus', () => gsap.to(f, {
+    boxShadow:'0 0 0 4px rgba(32,76,229,0.65)', borderColor:C.gfBlue, duration:0.15, ease:'power1.inOut'}));
+  f.addEventListener('blur', () => gsap.to(f, {
+    boxShadow:'0 1px 4px 0 rgba(18,25,97,0.08)', borderColor:C.sand, duration:0.15, ease:'power1.inOut'}));
+});
+
+gsap.utils.toArray('form').forEach(form => {
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = form.querySelector('.submit-btn');
+    const spinner = form.querySelector('.spinner');
+    const label = form.querySelector('.submit-label');
+    const ok = form.querySelector('.form-ok');
+    if(!btn) return;
+    spinner.style.display = 'block';
+    label.textContent = 'Sending';
+    const spin = gsap.to(spinner, {rotation:360, duration:1.1, ease:'none', repeat:-1});
+    gsap.to(btn, {opacity:0.6, duration:0.15});
+    setTimeout(() => {
+      spin.kill();
+      spinner.style.display = 'none';
+      gsap.to(btn, {opacity:1, duration:0.15});
+      label.textContent = 'Sent';
+      ok.style.display = 'block';
+      gsap.from(ok, {y:12, autoAlpha:0, duration:0.25, ease:'power2.out'});
+      form.querySelectorAll('input, textarea').forEach(i => i.value = '');
+      ScrollTrigger.refresh();
+    }, 1400);
+  });
+});
+
+/* -------------------------------------------------- K. VIDEO REELS (click to play) */
+gsap.utils.toArray('[data-video]').forEach(tile => {
+  const btn = tile.querySelector('.play-btn');
+  if(!btn) return;
+  btn.addEventListener('click', () => {
+    if(tile.querySelector('video')) return;
+    const v = document.createElement('video');
+    v.src = tile.dataset.video;
+    v.controls = true;
+    v.playsInline = true;
+    v.autoplay = true;
+    gsap.set(v, {autoAlpha:0});
+    tile.appendChild(v);
+    gsap.to(v, {autoAlpha:1, duration:0.3, ease:'power1.inOut'});
+    gsap.to([btn, tile.querySelector('.reel__cap'), tile.querySelector('.reel__scrim'), tile.querySelector('.testi__quote')].filter(Boolean),
+      {autoAlpha:0, duration:0.3, ease:'power1.inOut'});
+    v.play().catch(() => {});
+  });
+});
+
+/* -------------------------------------------------- L. QUIZ */
+(() => {
+  const QUESTIONS = [
+    {q:'Where do you sweat most?', a:['Underarms only','Underarms and hands','Underarms and feet','Lower back','Face and scalp','Not sure']},
+    {q:'How long has it been a problem?', a:['Less than a year','One to five years','As long as I remember']},
+    {q:'What have you already tried?', a:['Clinical antiperspirant','Botox','Prescription medication','Nothing yet']},
+    {q:'Does it affect what you wear?', a:['Every day','Sometimes','Rarely']},
+    {q:'How soon would you want to start?', a:['As soon as possible','In the next few months','Just researching']}
+  ];
+  const flow    = document.querySelector('#quizFlow');
+  const result  = document.querySelector('#quizResult');
+  const label   = document.querySelector('#quizProgressLabel');
+  const bar     = document.querySelector('#quizBar');
+  const qEl     = document.querySelector('#quizQuestion');
+  const optsEl  = document.querySelector('#quizOptions');
+  const nextBtn = document.querySelector('#quizNext');
+  if(!flow) return;
+  let i = 0, picked = null;
+
+  function renderOptions(){
+    optsEl.innerHTML = '';
+    QUESTIONS[i].a.forEach(text => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'quiz__opt';
+      b.textContent = text;
+      b.addEventListener('click', () => {
+        optsEl.querySelectorAll('.quiz__opt').forEach(o => o.classList.remove('sel'));
+        b.classList.add('sel');
+        picked = text;
+        gsap.fromTo(b, {scale:0.98}, {scale:1, duration:0.2, ease:'power2.out'});
+      });
+      optsEl.appendChild(b);
+    });
+    gsap.from(optsEl.children, {y:14, autoAlpha:0, duration:0.35, ease:'power2.out', stagger:0.06});
+  }
+
+  function render(){
+    label.textContent = 'Question ' + (i + 1) + ' of ' + QUESTIONS.length;
+    Array.from(bar.children).forEach((seg, n) => seg.classList.toggle('on', n <= i));
+    qEl.textContent = QUESTIONS[i].q;
+    document.querySelector('#quizNextLabel').textContent = (i === QUESTIONS.length - 1) ? 'See my result' : 'Next question';
+    picked = null;
+    renderOptions();
+    gsap.from(qEl, {y:12, autoAlpha:0, duration:0.35, ease:'power2.out'});
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if(!picked){
+      gsap.fromTo(optsEl, {x:-4}, {x:0, duration:0.3, ease:'power2.out'});
+      return;
+    }
+    if(i < QUESTIONS.length - 1){
+      i++;
+      gsap.to([qEl, optsEl], {autoAlpha:0, duration:0.18, ease:'power1.in', onComplete:() => {
+        gsap.set([qEl, optsEl], {autoAlpha:1});
+        render();
+      }});
+    } else {
+      gsap.to(flow, {autoAlpha:0, height:0, duration:0.35, ease:'sine.inOut', onComplete:() => {
+        flow.style.display = 'none';
+        result.style.display = 'block';
+        gsap.from(result, {y:20, autoAlpha:0, duration:0.5, ease:'power3.out'});
+        ScrollTrigger.refresh();
+      }});
+    }
+  });
+
+  render();
+})();
+
+/* -------------------------------------------------- M. MOBILE DRAWER */
+const drawer = document.querySelector('#drawer');
+const drawerTl = gsap.timeline({paused:true})
+  .set(drawer, {visibility:'visible'})
+  .to('.drawer__overlay', {autoAlpha:1, duration:0.2, ease:'power1.inOut'}, 0)
+  .fromTo('.drawer__inner', {autoAlpha:0, x:40}, {autoAlpha:1, x:0, duration:0.25, ease:'power1.in'}, 0);
+function closeDrawer(){
+  if(drawerTl.progress() === 0) return;
+  drawerTl.reverse();
+  gsap.delayedCall(0.3, () => gsap.set(drawer, {visibility:'hidden'}));
+}
+document.querySelector('#burger').addEventListener('click', () => drawerTl.play());
+document.querySelector('#drawerClose').addEventListener('click', closeDrawer);
+document.querySelector('.drawer__overlay').addEventListener('click', closeDrawer);
+gsap.utils.toArray('#drawerClose i').forEach((b, n) =>
+  gsap.set(b, {rotate: n === 0 ? 45 : -45}));
+
+/* -------------------------------------------------- N. PARALLAX on full-bleed photos */
+if(!reduced && window.matchMedia('(min-width: 901px)').matches){
+  gsap.utils.toArray('[data-parallax]').forEach(panel => {
+    gsap.fromTo(panel, {backgroundPositionY:'42%'}, {
+      backgroundPositionY:'58%', ease:'none',
+      scrollTrigger:{trigger:panel, start:'top bottom', end:'bottom top', scrub:true}
+    });
+  });
+}
+
+/* -------------------------------------------------- O. IMAGE / TILE HOVER (subtle) */
+gsap.utils.toArray('.play-btn').forEach(el =>
+  hover(el, {backgroundColor:C.cream}, 0.3));
+
+/* -------------------------------------------------- P. REDUCED MOTION */
+gsap.matchMedia().add('(prefers-reduced-motion: reduce)', () => {
+  gsap.globalTimeline.timeScale(100);
+  ScrollTrigger.getAll().forEach(st => st.disable());
+});
+
+/* -------------------------------------------------- Q. VIEWPORT CHANGES
+   Section heights are viewport shares now, so every resize / rotate /
+   mobile-toolbar collapse has to re-measure the scroll triggers.        */
+(() => {
+  let t;
+  const refresh = () => { clearTimeout(t); t = setTimeout(() => ScrollTrigger.refresh(), 180); };
+  window.addEventListener('resize', refresh);
+  window.addEventListener('orientationchange', refresh);
+  if(window.visualViewport) window.visualViewport.addEventListener('resize', refresh);
+})();
+
+/* layout can shift after fonts and images settle */
+window.addEventListener('load', () => ScrollTrigger.refresh());
+</script>
+</body>
+</html>
